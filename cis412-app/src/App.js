@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Welcome to
         </p>
         <a
           className="App-link"
@@ -18,6 +19,11 @@ function App() {
         >
           Hello
         </a>
+
+        <div className="button">Let's explore </div> 
+        
+        <div className="button">Meet up! </div> 
+        
       </header>
     </div>
   );

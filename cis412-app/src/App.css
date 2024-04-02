@@ -1,6 +1,19 @@
 /* src/index.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+  .container {
+    width: 50%; /* Adjust the width for smaller screens */
+    font-size: 12px; /* Adjust font size for smaller screens */
+    padding: 5px; /* Adjust padding for smaller screens */
+  }
+}
 
 .App {
   text-align: center;
@@ -11,11 +24,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   font-family: 'Poppins', sans-serif;
@@ -33,11 +41,17 @@
   color:  #1f47cd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.button {
+    background-color: #1f47cd; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 18px;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
