@@ -4,6 +4,7 @@ import './App.css';
 
 import Home from "./pages/home";
 import LandingPage from "./pages/LandingPage";
+import MeetupPage from "./pages/MeetupPage";
 import Events from "./pages/events";
 import {
   BrowserRouter as Router,
@@ -41,6 +42,9 @@ function App() {
 
             <Route exact path="/events" element={<Events />} />
             {/* <Route exact path="/profile" element={<Profile />} /> */}
+
+            <Route exact path="/meetup" element={<MeetupPage />} />
+            
 
           </Routes>
         </Router>
