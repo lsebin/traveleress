@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 import Home from "./pages/home";
+import LandingPage from "./pages/LandingPage";
 import Events from "./pages/events";
 import {
   BrowserRouter as Router,
@@ -31,7 +32,7 @@ function App() {
         {/* !!! Uncomment your page when you create it !!! */}
         <Router>
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<LandingPage />} />
             {/* <Route exact path="/meetup" element={<Meetup />} /> */}
             {/* <Route exact path="/meetup/coffee" element={<Coffee />} /> */}
             
