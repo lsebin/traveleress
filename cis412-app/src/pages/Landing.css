@@ -39,7 +39,7 @@
 }
 
 .button {
-    background-color: #1f47cd; /* Green */
+    background-color: #1f47cd;
     border: none;
     color: white;
     width: 300px;
@@ -51,6 +51,41 @@
     border-radius: 18px;
     z-index: 1;
     position: relative;
+  }
+
+  .outline-box {
+    display:flex;
+    width: 300px;
+    border: 2px solid black; /* Define the outline with a border */
+    border-radius: 15px;
+    padding: 10px; /* Add padding to create space between the text and the outline */
+    background: transparent; /* Make the interior of the box transparent */
+  }
+
+  .card {
+    /* background-color: #1f47cd; */
+    border: none;
+    color: white;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 18px;
+    z-index: 1;
+    position: relative;
+    font-weight: 500; 
+  }
+
+  .header-status {
+    font-weight: 700; 
+    text-align: left;
+    font-size: 30px;
+    margin-right: 150px; /* Add margin to separate from other elements */
   }
   
   .text-left {

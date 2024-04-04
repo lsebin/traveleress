@@ -1,6 +1,7 @@
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './Landing.css';
+import marker from './images/marker-pin-01.png';
 
 
 const MeetupPage = () => {
@@ -14,23 +15,30 @@ const MeetupPage = () => {
     <div style={containerStyle}>
       <header className="App-header">
 
-
-      <div style={{ height: '40px' }}></div> {/* Empty vertical box */}
-
-      <div className="inner-container">
-        <span className="text-left">Welcome to</span>
-        <div style={{ height: '1px' }}></div> {/* Empty vertical box */}
-        <span className="text-right">traveleress</span>
-      </div>
-    
-
-
-      <div style={{ height: '90px' }}></div> {/* Empty vertical box */}
-      <div className="button">Let's explore </div> 
-      <div style={{ height: '25px' }}></div> {/* Empty vertical box */}
-      <p style={{ fontSize: '15px' }}> or </p>
       <div style={{ height: '20px' }}></div> {/* Empty vertical box */}
-      <div className="button">Meet up! </div> 
+      <span className="header-status">Meet up!</span>
+      <div style={{ height: '20px' }}></div> {/* Empty vertical box */}
+      <div className="outline-box">
+        <img src={marker} style={{ height: '25px' }} alt="marker" />
+        <div style={{ width: '10px' }}></div>
+        <div>  
+          <div style={{ fontSize: '18px', textAlign: 'left' }}> Brooklyn, New York </div>
+          <div style={{ fontSize: '12px', textAlign: 'left', fontWeight:'300' }}> within 5km </div>
+        </div>
+      </div> 
+
+      <div style={{ height: '20px' }}></div> {/* Empty vertical box */}
+      <div style={{ fontSize: '14px', textAlign: 'left', fontWeight:'500', marginRight: '130px'}}> Recommended for you </div>
+      <div style={{ height: '20px' }}></div> {/* Empty vertical box */}
+
+      <div className ="card" style={{ backgroundColor: '#1f47cd'}}> Food </div> 
+      <div className ="card" style={{ backgroundColor: '#fec37d', color: 'black'}}> Shop </div>
+      <div className ="card" style={{ backgroundColor: '#fe755a'}}> Thrift </div>
+      <div className ="card" style={{ backgroundColor: '#4c8d7d'}}> Night Life </div>
+      <div className ="card" style={{ backgroundColor: '#f7cdfa', color: 'black'}}> Coffee </div>
+      <div className ="card" style={{ backgroundColor: '#0D2D48'}}> Tour </div>
+      
+      
       <div style={{ height: '140px' }}></div> {/* Empty vertical box */}
 
         
