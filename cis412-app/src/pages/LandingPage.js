@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const LandingPage = () => {
   const containerStyle = {
     maxWidth: '375px', /* iPhone width */
-    maxHeight: '812px',
+    maxHeight: '812px', /* iPhone height */
     margin: '0 auto', /* Center the content horizontally */
     backgroundColor: '#f7f3f0', /* Optional: Set a background color */
   };
