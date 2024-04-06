@@ -89,3 +89,20 @@
     margin-left: 100px;
     font-size: 40px;
   }
+
+  .nav-bar {
+    display:flex;
+    width: 375px;
+    background: transparent;
+    /* border: 1px solid black; */
+    border-top: 1px solid  black;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    /* border-top-color: black;
+    border-top-width: 1px; */
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    
+  }
+

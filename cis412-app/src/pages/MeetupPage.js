@@ -2,7 +2,10 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './Landing.css';
 import marker from './images/marker-pin-01.png';
-
+import star from './images/star-06.png';
+import globe from './images/globe-05.png';
+import calendar from './images/Vector.png';
+import person from './images/Icon.png';
 
 
 const MeetupPage = () => {
@@ -57,7 +60,14 @@ const MeetupPage = () => {
         <div style={{ fontSize: '13px', textAlign: 'center'}}> See more </div>
       </div>
 
-      <div style={{ height: '80px' }}></div> {/* Empty vertical box */}
+      <div style={{ height: '50px' }}></div> {/* Empty vertical box */}
+
+      <div className="nav-bar" /*style={{ borderTopColor: 'black', borderTopWidth: '1px'}} */ >
+        <img src={star} style={{ height: '25px' }} alt="marker" />
+        <img src={globe} style={{ height: '25px' }} alt="marker" />
+        <img src={calendar} style={{ height: '25px' }} alt="marker" />
+        <img src={person} style={{ height: '22px' }} alt="marker" />
+      </div>
         
       </header>
 
