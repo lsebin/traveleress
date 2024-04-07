@@ -35,7 +35,7 @@ const SpecificEventType = () => {
                             justifyContent: 'center', }}>
                     <div style={{ height: '10px' }}></div>
                     <div style={{ display: 'flex', alignItems: 'center', width: '100%'}}>
-                        <button className="back-button" onClick={() => {/*TODO: Meetup page*/}}>
+                        <button className="back-button" onClick={() => {"/eventslanding" }}>
                             &larr;
                         </button>
                         <span className="header-status-coffee">Coffee</span>
@@ -131,7 +131,7 @@ const SpecificEventType = () => {
                         <button className="nav-icon-button">
                             <img src={star} style={{ height: '25px' }} alt="star" />
                         </button>
-                        <button className="nav-icon-button" onClick={() => {/*TODO: Meetup page*/}}>
+                        <button className="nav-icon-button" onClick={() => {'/eventslanding'}}>
                             <div className="nav-button">
                                 <img src={globe} style={{ height: '25px' }} alt="globe" />
                                 <span>Meet up</span>
