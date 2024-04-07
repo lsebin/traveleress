@@ -2,7 +2,15 @@ import React from "react";
 import mapImage from '../images/maps.jpeg';
  
 const Events = () => {
+    const containerStyle = {
+        maxWidth: '375px',
+        maxHeight: '812px',
+        margin: '0 auto',
+        backgroundColor: '#f7f3f0',
+    };
+
     return (
+        <div style={containerStyle}>
         <div>
             <div class="row justify-content-between">
             <div class="col-4">
@@ -78,6 +86,7 @@ const Events = () => {
                     </div>
                     </div>
                 </div> */}
+        </div>
         </div>
     );
 };
