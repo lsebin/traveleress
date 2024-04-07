@@ -33,7 +33,7 @@ const MeetupPage = () => {
             </div> */}
             <header className="meetup-header">
                 <div className="back-run">
-                    <Link to="/" className="back">&lt;</Link>
+                    <Link to="/specificEventType" className="back">&lt;</Link>
                 </div>
                 <p>Manhattan-view Coffee run!</p>
             </header>
@@ -76,10 +76,10 @@ const MeetupPage = () => {
                 <button className="abutton">Sign up</button>
             </section>
             <div className="nav-bar">
-                    <button className="nav-icon-button" onClick={() => {}}>
+                    <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
                         <img src={star} style={{ height: '25px' }} alt="star" />
                     </button>
-                    <button className="nav-icon-button" onClick={() => {/*TODO: Meetup page*/}}>
+                    <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
                         <img src={globe} style={{ height: '25px' }} alt="globe" />
                     </button>
                     <button className="nav-icon-button" onClick={() => navigate('/events')}>

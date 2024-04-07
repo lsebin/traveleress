@@ -87,10 +87,10 @@ const Events = () => {
                 </div>
                 <button class="seeMore">See more</button>
                 <div className="nav-bar">
-                    <button className="nav-icon-button" onClick={() => {}}>
+                    <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
                         <img src={star} style={{ height: '25px' }} alt="star" />
                     </button>
-                    <button className="nav-icon-button" onClick={() => {/*TODO: Meetup page*/}}>
+                    <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
                         <img src={globe} style={{ height: '25px' }} alt="globe" />
                     </button>
                     <button className="nav-icon-button" onClick={() => navigate('/events')}>
