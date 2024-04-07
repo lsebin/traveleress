@@ -1,0 +1,64 @@
+
+.meetup-header {
+    display: flex;        /* Enables flexbox layout */
+    align-items:flex-start;  /* Vertically centers the items in the container */
+    justify-content: flex-start; /* Aligns items to the start of the container */
+    padding: 1em;         /* Add some padding around */
+    font-family: 'Poppins', sans-serif;
+
+    font-size: large;
+    font-weight: 700;
+}
+
+.back-run {
+    border-radius: 50%;
+    border-color: black;
+}
+
+.host-info {
+    font-weight: 700;
+    margin-bottom: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.event-info {
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+    font-weight: 600;
+
+}
+
+.event-desc {
+    font-weight: 400;
+    border-color: black;
+    background-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 1em;
+    padding: 0.5em;
+    margin: 0 1em;
+    font-size:medium;
+    text-align: left;
+    margin-bottom: 1em;
+    /* border-radius: ; */
+}
+
+.abutton {
+    background-color: #1f47cd;
+    color: white;
+    border-radius: 1em;
+    font-size: medium;
+    margin-bottom: 0.5em;
+    border: none;
+    padding: 0.5em 1em;
+    
+}
+
+.question {
+    border-radius: 0.5em;
+    border-style: solid;
+    border-color: black;
+    padding: 0.5em;
+    margin: 0.5em;
+
+}

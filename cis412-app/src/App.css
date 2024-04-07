@@ -17,7 +17,7 @@
 
 .App {
   text-align: center;
-  background-color: #F7F3F0;
+  /* background-color: #F7F3F0; */
 }
 
 .App-logo {
@@ -91,12 +91,7 @@
 
 }
 
-.meetup-header {
-  display: flex;        /* Enables flexbox layout */
-  align-items:flex-start;  /* Vertically centers the items in the container */
-  justify-content: flex-start; /* Aligns items to the start of the container */
-  padding: 1em;         /* Add some padding around */
-}
+
 
 .back {
   margin-right: 1em;   
@@ -107,7 +102,3 @@
   text-decoration: none;
 }
 
-.back-button {
-  border-radius: 50%;
-  border-color: black;
-}

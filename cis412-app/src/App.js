@@ -37,11 +37,8 @@ function App() {
           <Routes>
             <Route exact path="/" element={<LandingPage />} />
             <Route exact path="/landing" element={<LandingPage />} />
-            {/* <Route exact path="/meetup" element={<Meetup />} /> */}
-            {/* <Route exact path="/meetup/coffee" element={<Coffee />} /> */}
             
             <Route exact path="/meetup/coffee/manhattan-coffee-run" element={<MeetupPage />} /> 
-            {/* ^^^ idk if this event should inherit from Events.js yet */}
 
             <Route exact path="/events" element={<Events />} />
             <Route exact path="/profile" element={<Profile />} />
