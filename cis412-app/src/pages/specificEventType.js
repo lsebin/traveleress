@@ -13,10 +13,10 @@ const SpecificEventType = () => {
     const navigate = useNavigate();
 
     const containerStyle = {
-        maxWidth: '375px', /* iPhone width */
-        maxHeight: '812px', /* iPhone height */
-        margin: '0 auto', /* Center the content horizontally */
-        backgroundColor: '#f7f3f0', /* Optional: Set a background color */
+        maxWidth: '375px',
+        maxHeight: '812px',
+        margin: '0 auto',
+        backgroundColor: '#f7f3f0',
     };
 
     const eventBoxStyle = {
@@ -27,15 +27,17 @@ const SpecificEventType = () => {
     return (
         <div style={containerStyle}>
             <header className="App-header">
-                <div style={{ height: '10px' }}></div> {/* Empty vertical box */}
+                <div style={{ height: '10px' }}></div>
                 <div style={{ display: 'inline-block'}}>
-                    <button className="back-button">&larr;</button>
+                    <button className="back-button" onClick={() => {/*TODO: Meetup page*/}}>
+                        &larr;
+                    </button>
                     <span className="header-status">Coffee</span>
                 </div>
                 <div style={{ height: '10px' }}></div>
                 <div className="line"></div>
                 <div className="App-body">
-                    <div style={{ height: '30px' }}></div> {/* Empty vertical box */}
+                    <div style={{ height: '30px' }}></div>
                     <div className="event-box" style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
@@ -70,7 +72,9 @@ const SpecificEventType = () => {
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
-                                <button className="learn-more">Learn More</button>
+                                <button className="learn-more" onClick={() => {/*TODO: Meetup specific page*/}}>
+                                    Learn More
+                                </button>
                                 <div className="participation-box">3/5</div>
                             </div>
                         </div>
@@ -117,10 +121,10 @@ const SpecificEventType = () => {
                     </div> 
                     <div style={{ height: '10px' }}></div>
                     <div className="nav-bar">
-                        <button className="nav-icon-button" onClick={() => {}}>
+                        <button className="nav-icon-button">
                             <img src={star} style={{ height: '25px' }} alt="star" />
                         </button>
-                        <button className="nav-icon-button" onClick={() => {}}>
+                        <button className="nav-icon-button" onClick={() => {/*TODO: Meetup page*/}}>
                             <div className="nav-button">
                                 <img src={globe} style={{ height: '25px' }} alt="globe" />
                                 <span>Meet up</span>

@@ -92,7 +92,7 @@ const Profile = () => {
                     <button className="nav-icon-button" onClick={() => {}}>
                         <img src={star} style={{ height: '25px' }} alt="star" />
                     </button>
-                    <button className="nav-icon-button" onClick={() => {}}>
+                    <button className="nav-icon-button" onClick={() => {/*TODO: Meetup page*/}}>
                         <img src={globe} style={{ height: '25px' }} alt="globe" />
                     </button>
                     <button className="nav-icon-button" onClick={() => navigate('/events')}>
