@@ -97,6 +97,46 @@
   margin-left: 5px;
 }
 
+.nav-bar {
+  display:flex;
+  width: 375px;
+  background: white;
+  border-top: 1.5px solid  black;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  justify-content: space-evenly;
+  bottom: 0;
+  align-items: center;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  background-color: #1f47cd; /* Bootstrap primary button color */
+  color: white;
+  border: 1px solid black;
+  border-radius: 100px;
+  font-size: 14px;
+}
+
+.nav-button img {
+  height: 25px;
+  margin-right: 5px;
+  filter: invert(100%);
+}
+
+.nav-icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; /* make the background transparent or any color */
+  border: none; /* remove borders if you don't need them */
+  cursor: pointer; /* changes the mouse pointer on hover */
+  text-align: center;
+}
+
 .outline-box {
   display:flex;
   width: 300px;

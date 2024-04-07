@@ -1,14 +1,14 @@
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 import Home from "./pages/home";
 import Events from "./pages/events";
+import Profile from './pages/profile';
+import SpecificEventType from './pages/specificEventType';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
 } from "react-router-dom";
 
 function App() {
@@ -39,7 +39,8 @@ function App() {
             {/* ^^^ idk if this event should inherit from Events.js yet */}
 
             <Route exact path="/events" element={<Events />} />
-            {/* <Route exact path="/profile" element={<Profile />} /> */}
+            <Route exact path="/profile" element={<Profile />} />
+            <Route exact path="/specificEventType" element={<SpecificEventType />}/>
 
           </Routes>
         </Router>
