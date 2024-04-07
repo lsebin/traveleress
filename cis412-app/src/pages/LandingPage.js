@@ -38,7 +38,7 @@ const LandingPage = () => {
       <div style={{ height: '25px' }}></div> {/* Empty vertical box */}
       <p style={{ fontSize: '15px' }}> or </p>
       <div style={{ height: '20px' }}></div> {/* Empty vertical box */}
-      <Link to="/meetup"><div className="button">Meet up!  </div> </Link>
+      <Link to="/eventslanding"><div className="button">Meet up!  </div> </Link>
       <div style={{ height: '140px' }}></div> {/* Empty vertical box */}
 
       <div style={{  top: '330px', left: '75px'}} className="background-image"> <img src={pt} style={{ height: '360px' }} alt="pt" /> </div>

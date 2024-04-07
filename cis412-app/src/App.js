@@ -4,7 +4,7 @@ import './App.css';
 
 import Home from "./pages/home";
 import LandingPage from "./pages/LandingPage";
-import MeetupPage from "./pages/MeetupPage";
+import EventsLandingPage from "./pages/EventsLandingPage";
 import Events from "./pages/events";
 import {
   BrowserRouter as Router,
@@ -33,7 +33,8 @@ function App() {
         {/* !!! Uncomment your page when you create it !!! */}
         <Router>
           <Routes>
-            <Route exact path="/" element={<LandingPage />} />
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/landing" element={<LandingPage />} />
             {/* <Route exact path="/meetup" element={<Meetup />} /> */}
             {/* <Route exact path="/meetup/coffee" element={<Coffee />} /> */}
             
@@ -43,7 +44,7 @@ function App() {
             <Route exact path="/events" element={<Events />} />
             {/* <Route exact path="/profile" element={<Profile />} /> */}
 
-            <Route exact path="/meetup" element={<MeetupPage />} />
+            <Route exact path="/eventslanding" element={<EventsLandingPage />} />
             
 
           </Routes>

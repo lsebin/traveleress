@@ -8,7 +8,7 @@ import calendar from './images/Vector.png';
 import person from './images/Icon.png';
 
 
-const MeetupPage = () => {
+const EventsLandingPage = () => {
   const containerStyle = {
     maxWidth: '375px', /* iPhone width */
     maxHeight: '812px', /* iPhone height */
@@ -75,4 +75,4 @@ const MeetupPage = () => {
   );
 }
 
-export default MeetupPage;
+export default EventsLandingPage;
