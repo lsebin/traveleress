@@ -1,0 +1,155 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One:wght@300;400;500;600;700&display=swap');
+
+.App-header {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #f7f3f0;
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  color: black;
+  position: relative;
+  padding: 10px 0;
+}
+
+.App-body {
+  background-color: #f7f3f0;
+  width: 100%;
+}
+
+.back-button {
+  background-color: #f7cdfa;
+  border: none;
+  font-size: 30px; /* Adjust size as needed */
+  color: black; /* Adjust color as needed */
+  cursor: pointer;
+  padding: 1px 18px;
+  position: absolute;
+  left: 0;
+}
+
+.event-box {
+  background-color: #f7cdfa;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 20px; /* Spacing between the boxes */
+  box-shadow: 0 4px 10px rgba(0, 0, 1, 1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column; /* Stack children elements vertically */
+  justify-content: center;
+}
+
+.event-organizer {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 13px;
+  margin-left: 6px;
+}
+
+.event-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header-status-coffee {
+  font-weight: bold; 
+  text-align: center;
+  font-size: 27px;
+  width: 100%;
+}
+
+.learn-more {
+  background-color: #f7f3f0; /* Adjust button color as needed */
+  color: black;
+  font-size: 13px;
+  border: 1px solid black;
+  padding: 5px 8px;
+  border-radius: 100px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  position: relative;
+}
+
+.map-style {
+  height: 120px;
+  margin-right: 10px; /* Add space between the map and the info */
+  border-radius: 15px;
+  margin-left: 5px;
+}
+
+.nav-bar {
+  display:flex;
+  width: 375px;
+  background: white;
+  border-top: 1.5px solid  black;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  justify-content: space-evenly;
+  bottom: 0;
+  align-items: center;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  background-color: #1f47cd; /* Bootstrap primary button color */
+  color: white;
+  border: 1px solid black;
+  border-radius: 100px;
+  font-size: 14px;
+}
+
+.nav-button img {
+  height: 25px;
+  margin-right: 5px;
+  filter: invert(100%);
+}
+
+.nav-icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; /* make the background transparent or any color */
+  border: none; /* remove borders if you don't need them */
+  cursor: pointer; /* changes the mouse pointer on hover */
+  text-align: center;
+}
+
+.outline-box {
+  display:flex;
+  width: 300px;
+  padding: 5px;
+  border-radius: 15px; 
+  background: transparent; /* Make the interior of the box transparent */
+}
+
+.participation-box {
+  margin-left: "auto";
+  font-size: 13px;
+  border: 1px solid black;
+  border-radius: 100px;
+  padding: 5px 10px;
+}

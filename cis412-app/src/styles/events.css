@@ -1,0 +1,9 @@
+.card {
+    background-color: whitesmoke;
+    border-width: 3px;
+}
+
+.plusButton {
+    border-radius: 20px;
+    background-color: #1f47cd;
+}

@@ -1,0 +1,113 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+  .container {
+    width: 50%; /* Adjust the width for smaller screens */
+    font-size: 12px; /* Adjust font size for smaller screens */
+    padding: 5px; /* Adjust padding for smaller screens */
+  }
+}
+
+.App {
+  text-align: center;
+  background-color: #F7F3F0;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+.App-header {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f3f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color:  #1f47cd;
+}
+
+
+
+.button {
+    background-color: #1f47cd;
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 18px;
+  }
+
+.card {
+  margin: 5%;
+  border-color: black;
+}
+
+.title {
+  font-family: 'Poppins';
+  font-weight: 700;
+  border-bottom: none;
+  padding: 30px; 
+  text-align: left;
+
+}
+
+.subheader {
+  font-family: 'Poppins';
+  font-weight: 500;
+  border-bottom: none;
+  padding: 10px 25px 0px 25px; 
+  text-align: left;
+  font-size: large;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+
+}
+
+.mapImage {
+  width: 40%;
+
+}
+
+.meetup-header {
+  display: flex;        /* Enables flexbox layout */
+  align-items:flex-start;  /* Vertically centers the items in the container */
+  justify-content: flex-start; /* Aligns items to the start of the container */
+  padding: 1em;         /* Add some padding around */
+}
+
+.back {
+  margin-right: 1em;   
+  margin-top: 1em;
+  font-weight: 800;
+  font-size: x-large;
+  color: black;
+  text-decoration: none;
+}
+
+.back-button {
+  border-radius: 50%;
+  border-color: black;
+}
