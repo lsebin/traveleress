@@ -33,7 +33,7 @@ function App() {
         {/* !!! Uncomment your page when you create it !!! */}
         <Router>
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<LandingPage />} />
             <Route exact path="/landing" element={<LandingPage />} />
             {/* <Route exact path="/meetup" element={<Meetup />} /> */}
             {/* <Route exact path="/meetup/coffee" element={<Coffee />} /> */}

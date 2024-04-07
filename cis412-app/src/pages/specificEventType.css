@@ -5,7 +5,7 @@
 .App-header {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  background-color: #f7cdfa;
+  background-color: #f7f3f0;
   display: flex;
   align-items: center;
   /* flex-direction: column; */
@@ -23,12 +23,12 @@
 }
 
 .back-button {
-  background: none;
+  background-color: #f7cdfa;
   border: none;
   font-size: 30px; /* Adjust size as needed */
   color: black; /* Adjust color as needed */
   cursor: pointer;
-  padding: 0 20px;
+  padding: 1px 18px;
   position: absolute;
   left: 0;
 }
@@ -66,10 +66,11 @@
   font-weight: bold;
 }
 
-.header-status {
-  font-weight: 700; 
+.header-status-coffee {
+  font-weight: bold; 
   text-align: center;
   font-size: 27px;
+  width: 100%;
 }
 
 .learn-more {

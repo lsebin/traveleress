@@ -27,15 +27,22 @@ const SpecificEventType = () => {
     return (
         <div style={containerStyle}>
             <header className="App-header">
-                <div style={{ height: '10px' }}></div>
-                <div style={{ display: 'inline-block'}}>
-                    <button className="back-button" onClick={() => {/*TODO: Meetup page*/}}>
-                        &larr;
-                    </button>
-                    <span className="header-status">Coffee</span>
+                <div style={{backgroundColor: '#f7cdfa',
+                            width: '100%',
+                            display: 'flex', // Use flexbox for alignment
+                            flexDirection: 'column', // Stack children vertically
+                            alignItems: 'center', // Center children horizontally
+                            justifyContent: 'center', }}>
+                    <div style={{ height: '10px' }}></div>
+                    <div style={{ display: 'flex', alignItems: 'center', width: '100%'}}>
+                        <button className="back-button" onClick={() => {/*TODO: Meetup page*/}}>
+                            &larr;
+                        </button>
+                        <span className="header-status-coffee">Coffee</span>
+                    </div>
+                    <div style={{ height: '10px' }}></div>
+                    <div className="line"></div>
                 </div>
-                <div style={{ height: '10px' }}></div>
-                <div className="line"></div>
                 <div className="App-body">
                     <div style={{ height: '30px' }}></div>
                     <div className="event-box" style= {eventBoxStyle}>
