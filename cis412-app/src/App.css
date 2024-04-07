@@ -45,7 +45,7 @@
 
 
 .button {
-    background-color: #1f47cd; /* Green */
+    background-color: #1f47cd;
     border: none;
     color: white;
     padding: 10px 50px;
@@ -58,5 +58,56 @@
 
 .card {
   margin: 5%;
+  border-color: black;
+}
+
+.title {
+  font-family: 'Poppins';
+  font-weight: 700;
+  border-bottom: none;
+  padding: 30px; 
+  text-align: left;
+
+}
+
+.subheader {
+  font-family: 'Poppins';
+  font-weight: 500;
+  border-bottom: none;
+  padding: 10px 25px 0px 25px; 
+  text-align: left;
+  font-size: large;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+
+}
+
+.mapImage {
+  width: 40%;
+
+}
+
+.meetup-header {
+  display: flex;        /* Enables flexbox layout */
+  align-items:flex-start;  /* Vertically centers the items in the container */
+  justify-content: flex-start; /* Aligns items to the start of the container */
+  padding: 1em;         /* Add some padding around */
+}
+
+.back {
+  margin-right: 1em;   
+  margin-top: 1em;
+  font-weight: 800;
+  font-size: x-large;
+  color: black;
+  text-decoration: none;
+}
+
+.back-button {
+  border-radius: 50%;
   border-color: black;
 }

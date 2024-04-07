@@ -4,6 +4,8 @@ import './App.css';
 
 import Home from "./pages/home";
 import Events from "./pages/events";
+import MeetupPage from "./pages/meetupPage";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -35,7 +37,7 @@ function App() {
             {/* <Route exact path="/meetup" element={<Meetup />} /> */}
             {/* <Route exact path="/meetup/coffee" element={<Coffee />} /> */}
             
-            {/* <Route exact path="/meetup/coffee/manhattan-coffee-run" element={<Event1 />} />  */}
+            <Route exact path="/meetup/coffee/manhattan-coffee-run" element={<MeetupPage />} /> 
             {/* ^^^ idk if this event should inherit from Events.js yet */}
 
             <Route exact path="/events" element={<Events />} />
