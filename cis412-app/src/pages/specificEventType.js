@@ -79,7 +79,7 @@ const SpecificEventType = () => {
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
-                                <button className="learn-more" onClick={() => {/*TODO: Meetup specific page*/}}>
+                                <button className="learn-more" onClick={() => navigate('/meetup/coffee/manhattan-coffee-run')}>
                                     Learn More
                                 </button>
                                 <div className="participation-box">3/5</div>

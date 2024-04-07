@@ -29,7 +29,6 @@ const Profile = () => {
         <div style={containerStyle}>
             <header className="App-header">
                 <div className="top-screen">
-                    <div style={{ height: '10px' }}></div>
                     <div style={{ display: 'inline-block' }}>
                         <img src={bookmark} className="saved-button" alt="saved"></img>
                         <img src={pencil} className="edit-button" alt="edit"></img>
@@ -92,7 +91,7 @@ const Profile = () => {
                     <button className="nav-icon-button" onClick={() => {}}>
                         <img src={star} style={{ height: '25px' }} alt="star" />
                     </button>
-                    <button className="nav-icon-button" onClick={() => {/*TODO: Meetup page*/}}>
+                    <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
                         <img src={globe} style={{ height: '25px' }} alt="globe" />
                     </button>
                     <button className="nav-icon-button" onClick={() => navigate('/events')}>
