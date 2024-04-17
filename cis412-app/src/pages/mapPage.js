@@ -7,6 +7,8 @@ import star from '../icons/star.svg';
 import globe from '../icons/earth.svg';
 import calendar from '../icons/calendar.svg';
 import person from '../icons/user-circle.svg';
+import myLocation from '../icons/icons8-map-pin-48.png';
+import eventLocation from '../icons/icons8-map-pin-32.png';
 import { useNavigate } from 'react-router-dom';
 
 const SpecificEventType = () => {
@@ -46,14 +48,31 @@ const SpecificEventType = () => {
                 <div className="App-body">
                     <div style={{ height: '30px' }}></div>
 
-                    <div>
+                    <div className="map-container">
                         <img src={katie_map} className="mapSearch" alt="katie_map" />
+                        <img src={myLocation} alt="myll" className="map-pin" style={{ top: "50px", left: "60px" }}/>
+                        <div className="map-content" style={{ top: "80px", left: "90px" }}>
+                            {"Your \n location"}
+                        </div>
+                        <img src={eventLocation} alt="el" className="map-pin" style={{ top: "200px", left: "170px" }}/>
+                        <div className="map-content" style={{ top: "215px", left: "195px" }}>
+                            {"Katie"}
+                        </div>
+                        <img src={eventLocation} alt="el" className="map-pin" style={{ top: "20px", left: "160px" }}/>
+                        <div className="map-content" style={{ top: "35px", left: "180px" }}>
+                            {"Liz"}
+                        </div>
+                        <img src={eventLocation} alt="el" className="map-pin" style={{ top: "120px", left: "300px" }}/>
+                        <div className="map-content" style={{ top: "135px", left: "325px" }}>
+                            {"Sebin"}
+                        </div>
                     </div>
+
 
                     <div style={{ height: '10px' }}></div>
                     <div className="event-box" style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
-
+                    
 
                         <div className="event-info">
                             <h2 className="event-title">Cute coffee study sesh :)</h2>
