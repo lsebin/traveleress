@@ -6,6 +6,7 @@ import LandingPage from "./pages/LandingPage";
 import EventsLandingPage from "./pages/EventsLandingPage";
 import Events from "./pages/events";
 import MeetupPage from "./pages/meetupPage";
+import MapPage from "./pages/mapPage";
 
 import Profile from './pages/profile';
 import SpecificEventType from './pages/specificEventType';
@@ -45,6 +46,8 @@ function App() {
             <Route exact path="/specificEventType" element={<SpecificEventType />}/>
 
             <Route exact path="/eventslanding" element={<EventsLandingPage />} />
+
+            <Route exact path="/mapPage" element={<MapPage />} />
             
 
           </Routes>
