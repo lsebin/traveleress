@@ -1,17 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import './specificEventTypes/specificEventType.css';
-import katie_map from '../images/katie_map.png';
-import user_circle from '../icons/user-circle.svg';
-import bookmark from '../icons/bookmark.svg';
-import star from '../icons/star.svg';
-import globe from '../icons/earth.svg';
-import calendar from '../icons/calendar.svg';
-import person from '../icons/user-circle.svg';
-import myLocation from '../icons/icons8-map-pin-48.png';
-import eventLocation from '../icons/icons8-map-pin-32.png';
+import './specificEventType.css';
+import katie_map from '../../images/katie_map.png';
+import user_circle from '../../icons/user-circle.svg';
+import bookmark from '../../icons/bookmark.svg';
+import star from '../../icons/star.svg';
+import globe from '../../icons/earth.svg';
+import calendar from '../../icons/calendar.svg';
+import person from '../../icons/user-circle.svg';
 import { useNavigate } from 'react-router-dom';
 
-const SpecificEventType = () => {
+const CoffeeType = () => {
     const navigate = useNavigate();
 
     const containerStyle = {
@@ -23,7 +21,8 @@ const SpecificEventType = () => {
 
     const eventBoxStyle = {
         padding: '10px', 
-        textAlign: 'left'
+        textAlign: 'left',
+        backgroundColor: '#f7cdfa'
     }
 
     return (
@@ -37,7 +36,7 @@ const SpecificEventType = () => {
                             justifyContent: 'center', }}>
                     <div style={{ height: '10px' }}></div>
                     <div style={{ display: 'flex', alignItems: 'center', width: '100%'}}>
-                        <button className="back-button" onClick={() => {"/eventslanding" }}>
+                        <button className="back-button" onClick={() => navigate('/eventslanding')}>
                             &larr;
                         </button>
                         <span className="header-status-coffee">Coffee</span>
@@ -47,33 +46,8 @@ const SpecificEventType = () => {
                 </div>
                 <div className="App-body">
                     <div style={{ height: '30px' }}></div>
-
-                    <div className="map-container">
-                        <img src={katie_map} className="mapSearch" alt="katie_map" />
-                        <img src={myLocation} alt="myll" className="map-pin" style={{ top: "50px", left: "60px" }}/>
-                        <div className="map-content" style={{ top: "80px", left: "90px" }}>
-                            {"Your \n location"}
-                        </div>
-                        <img src={eventLocation} alt="el" className="map-pin" style={{ top: "200px", left: "170px" }}/>
-                        <div className="map-content" style={{ top: "215px", left: "195px" }}>
-                            {"Katie"}
-                        </div>
-                        <img src={eventLocation} alt="el" className="map-pin" style={{ top: "20px", left: "160px" }}/>
-                        <div className="map-content" style={{ top: "35px", left: "180px" }}>
-                            {"Liz"}
-                        </div>
-                        <img src={eventLocation} alt="el" className="map-pin" style={{ top: "120px", left: "300px" }}/>
-                        <div className="map-content" style={{ top: "135px", left: "325px" }}>
-                            {"Sebin"}
-                        </div>
-                    </div>
-
-
-                    <div style={{ height: '10px' }}></div>
                     <div className="event-box" style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
-                    
-
                         <div className="event-info">
                             <h2 className="event-title">Cute coffee study sesh :)</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
@@ -82,7 +56,6 @@ const SpecificEventType = () => {
                                     <img src={user_circle} alt="user_profile_pic" />
                                     <p className="event-organizer">Katie L.</p>
                                 </div>
-                                <img src={bookmark} style={{ marginLeft: "auto" }} alt="saved" />
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
@@ -102,7 +75,6 @@ const SpecificEventType = () => {
                                     <img src={user_circle} alt="user_profile_pic" />
                                     <p className="event-organizer">Liz A.</p>
                                 </div>
-                                <img src={bookmark} style={{ marginLeft: "auto" }} alt="saved" />
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
@@ -113,7 +85,7 @@ const SpecificEventType = () => {
                             </div>
                         </div>
                     </div> 
-                    {/* <div style={{ height: '10px' }}></div>
+                    <div style={{ height: '10px' }}></div>
                     <div className="event-box" style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
@@ -124,7 +96,6 @@ const SpecificEventType = () => {
                                     <img src={user_circle} alt="user_profile_pic" />
                                     <p className="event-organizer">Ashley T.</p>
                                 </div>
-                                <img src={bookmark} style={{ marginLeft: "auto" }} alt="saved" />
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
@@ -132,7 +103,7 @@ const SpecificEventType = () => {
                                 <div className="participation-box">6/10</div>
                             </div>
                         </div>
-                    </div>  */}
+                    </div> 
                     <div style={{ height: '10px' }}></div>
                     <div className="event-box" style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
@@ -144,7 +115,6 @@ const SpecificEventType = () => {
                                     <img src={user_circle} alt="user_profile_pic" />
                                     <p className="event-organizer">Sebin L.</p>
                                 </div>
-                                <img src={bookmark} style={{ marginLeft: "auto" }} alt="saved" />
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
@@ -158,7 +128,7 @@ const SpecificEventType = () => {
                         <button className="nav-icon-button">
                             <img src={star} style={{ height: '25px' }} alt="star" />
                         </button>
-                        <button className="nav-icon-button" onClick={() => {'/eventslanding'}}>
+                        <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
                             <div className="nav-button">
                                 <img src={globe} style={{ height: '25px' }} alt="globe" />
                                 <span>Meet up</span>
@@ -173,8 +143,8 @@ const SpecificEventType = () => {
                     </div>
                 </div>
             </header>
-        </div>
+        </div> 
     );
 }
 
-export default SpecificEventType;
+export default CoffeeType;

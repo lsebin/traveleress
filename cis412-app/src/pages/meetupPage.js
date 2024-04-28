@@ -33,7 +33,7 @@ const MeetupPage = () => {
             </div> */}
             <header className="meetup-header">
                 <div className="back-run">
-                    <Link to="/specificEventType" className="back">&lt;</Link>
+                    <Link to="/coffeeType" className="back">&lt;</Link>
                 </div>
                 <p>Manhattan-view Coffee run!</p>
             </header>

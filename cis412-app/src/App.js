@@ -9,7 +9,10 @@ import MeetupPage from "./pages/meetupPage";
 import MapPage from "./pages/mapPage";
 
 import Profile from './pages/profile';
-import SpecificEventType from './pages/specificEventType';
+import CoffeeType from './pages/specificEventTypes/coffeeType';
+import FoodType from './pages/specificEventTypes/foodType';
+import NightLifeType from './pages/specificEventTypes/nightLifeType';
+import ShopType from './pages/specificEventTypes/shopType';
 import {
   BrowserRouter as Router,
   Routes,
@@ -43,8 +46,10 @@ function App() {
 
             <Route exact path="/events" element={<Events />} />
             <Route exact path="/profile" element={<Profile />} />
-            <Route exact path="/specificEventType" element={<SpecificEventType />}/>
-
+            <Route exact path="/coffeeType" element={<CoffeeType />}/>
+            <Route exact path="/foodType" element={<FoodType />}/>
+            <Route exact path="/shopType" element={<ShopType />}/>
+            <Route exact path="/nightLifeType" element={<NightLifeType />}/>
             <Route exact path="/eventslanding" element={<EventsLandingPage />} />
 
             <Route exact path="/mapPage" element={<MapPage />} />

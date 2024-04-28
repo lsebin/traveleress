@@ -40,19 +40,19 @@ const EventsLandingPage = () => {
       <div style={{ height: '20px' }}></div> {/* Empty vertical box */}
 
       <div className = "landing-outline-box">
-        <button className ="s-card" style={{ backgroundColor: '#1f47cd'}}> Food </button> 
+        <button className ="s-card" style={{ backgroundColor: '#1f47cd'}} onClick={() => navigate('/foodType')}> Food </button> 
         <div style={{ width: '20px' }}></div> {/* Empty vertical box */}
-        <button className ="s-card" style={{ backgroundColor: '#fec37d', color: 'black'}}> Shop </button>
+        <button className ="s-card" style={{ backgroundColor: '#fec37d', color: 'black'}} onClick={() => navigate('/shopType')}> Shop </button>
       </div>
 
       <div className = "landing-outline-box">
         <button className ="s-card" style={{ backgroundColor: '#fe755a'}}> Thrift </button>
         <div style={{ width: '20px' }}></div> {/* Empty vertical box */}
-        <button className ="s-card" style={{ backgroundColor: '#4c8d7d'}}> Night Life </button>
+        <button className ="s-card" style={{ backgroundColor: '#4c8d7d'}} onClick={() => navigate('/nightLifeType')}> Night Life </button>
       </div>
       
       <div className = "landing-outline-box">
-        <button className ="s-card" style={{ backgroundColor: '#f7cdfa', color: 'black'}} onClick={() => navigate('/specificEventType')}> Coffee </button> 
+        <button className ="s-card" style={{ backgroundColor: '#f7cdfa', color: 'black'}} onClick={() => navigate('/coffeeType')}> Coffee </button> 
         <div style={{ width: '20px' }}></div> {/* Empty vertical box */}
         <button className ="s-card" style={{ backgroundColor: '#0D2D48'}}> Tour </button>
       </div>
