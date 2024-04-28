@@ -99,7 +99,7 @@ const Events = () => {
                         <span>Events</span>
                     </div>
                     </button>
-                    <button className="nav-icon-button" onClick={() => navigate('/profile')}>
+                    <button className="nav-icon-button" onClick={() => navigate('/userProfile')}>
                             <img src={person} style={{ height: '25px' }} alt="person" />
                         
                     </button>

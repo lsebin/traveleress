@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './specificEventType.css';
 import katie_map from '../../images/katie_map.png';
 import user_circle from '../../icons/user-circle.svg';
-import bookmark from '../../icons/bookmark.svg';
 import star from '../../icons/star.svg';
 import globe from '../../icons/earth.svg';
 import calendar from '../../icons/calendar.svg';
@@ -65,7 +64,7 @@ const CoffeeType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/coffee/coffee-2')} style={eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Manhattan-view Coffee run!</h2>
@@ -78,7 +77,7 @@ const CoffeeType = () => {
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
-                                <button className="learn-more" onClick={() => navigate('/meetup/coffee/manhattan-coffee-run')}>
+                                <button className="learn-more" onClick={() => navigate('/meetup/coffee/coffee-2')}>
                                     Learn More
                                 </button>
                                 <div className="participation-box">3/5</div>
@@ -137,7 +136,7 @@ const CoffeeType = () => {
                         <button className="nav-icon-button" onClick={() => navigate('/events')}>
                             <img src={calendar} style={{ height: '25px' }} alt="calendar" />
                         </button>
-                        <button className="nav-icon-button" onClick={() => navigate('/profile')}>
+                        <button className="nav-icon-button" onClick={() => navigate('/userProfile')}>
                             <img src={person} style={{ height: '25px' }} alt="person" />
                         </button>
                     </div>

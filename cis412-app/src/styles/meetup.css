@@ -3,9 +3,8 @@
     display: flex;        /* Enables flexbox layout */
     align-items:flex-start;  /* Vertically centers the items in the container */
     justify-content: flex-start; /* Aligns items to the start of the container */
-    padding: 1em;         /* Add some padding around */
+    padding: 0.8em 1em;       /* Add some padding around */
     font-family: 'Poppins', sans-serif;
-
     font-size: large;
     font-weight: 700;
 }
@@ -17,18 +16,19 @@
 
 .host-info {
     font-weight: 700;
-    margin-bottom: 0px;
     font-family: 'Poppins', sans-serif;
 }
 
-.event-info {
+.event-info-specific {
     font-family: 'Poppins', sans-serif;
     font-size: medium;
     font-weight: 600;
-
+    text-align: left;
+    margin-left: 1em;
 }
 
 .event-desc {
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     border-color: black;
     background-color: white;
@@ -37,9 +37,9 @@
     border-radius: 1em;
     padding: 0.5em;
     margin: 0 1em;
-    font-size:medium;
+    font-size: medium;
     text-align: left;
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
     /* border-radius: ; */
 }
 
@@ -48,17 +48,40 @@
     color: white;
     border-radius: 1em;
     font-size: medium;
-    margin-bottom: 0.5em;
     border: none;
     padding: 0.5em 1em;
     
 }
 
+.participation-box-event {
+    font-size: 13px;
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 2px 11px;
+    margin-left: -25px;
+    margin-right: 17px;
+}
+
 .question {
-    border-radius: 0.5em;
+    border-radius: 1em;
     border-style: solid;
     border-color: black;
-    padding: 0.5em;
-    margin: 0.5em;
+    padding: 0.5em 1em;
+    margin: 0.5em 1em 0.5em 0em;
+    width: 65%
+}
 
+.qa-list {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    list-style: none;
+    text-align: left;
+    background-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 1em;
+    padding: 0.5em;
+    margin: 0 1em;
+    text-align: left;
+    margin-bottom: 0.8em;
 }

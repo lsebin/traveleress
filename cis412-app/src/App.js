@@ -1,18 +1,27 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
-import Home from "./pages/home";
 import LandingPage from "./pages/LandingPage";
 import EventsLandingPage from "./pages/EventsLandingPage";
 import Events from "./pages/events";
-import MeetupPage from "./pages/meetupPage";
-import MapPage from "./pages/mapPage";
 
-import Profile from './pages/profile';
+import UserProfile from './pages/profiles/userProfile';
+import ATProfile from './pages/profiles/ATProfile';
+import LAProfile from './pages/profiles/LAProfile';
+
 import CoffeeType from './pages/specificEventTypes/coffeeType';
+import Coffee2Page from "./pages/specificEvents/coffeeEvents/coffee2";
+
 import FoodType from './pages/specificEventTypes/foodType';
+
+
 import NightLifeType from './pages/specificEventTypes/nightLifeType';
+
+
 import ShopType from './pages/specificEventTypes/shopType';
+
+
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -41,19 +50,25 @@ function App() {
           <Routes>
             <Route exact path="/" element={<LandingPage />} />
             <Route exact path="/landing" element={<LandingPage />} />
-            
-            <Route exact path="/meetup/coffee/manhattan-coffee-run" element={<MeetupPage />} /> 
-
-            <Route exact path="/events" element={<Events />} />
-            <Route exact path="/profile" element={<Profile />} />
-            <Route exact path="/coffeeType" element={<CoffeeType />}/>
-            <Route exact path="/foodType" element={<FoodType />}/>
-            <Route exact path="/shopType" element={<ShopType />}/>
-            <Route exact path="/nightLifeType" element={<NightLifeType />}/>
             <Route exact path="/eventslanding" element={<EventsLandingPage />} />
 
-            <Route exact path="/mapPage" element={<MapPage />} />
-            
+            <Route exact path="/events" element={<Events />} />
+            <Route exact path="/userProfile" element={<UserProfile />} />
+            <Route exact path="/ATProfile" element={<ATProfile />} />
+            <Route exact path="/LAProfile" element={<LAProfile />} />
+
+            {/* COFFEE */}
+            <Route exact path="/coffeeType" element={<CoffeeType />}/>
+            <Route exact path="/meetup/coffee/coffee-2" element={<Coffee2Page />} /> 
+
+            {/* FOOD */}
+            <Route exact path="/foodType" element={<FoodType />}/>
+
+            {/* SHOP */}
+            <Route exact path="/shopType" element={<ShopType />}/>
+
+            {/* NIGHT LIFE */}
+            <Route exact path="/nightLifeType" element={<NightLifeType />}/>    
 
           </Routes>
         </Router>
