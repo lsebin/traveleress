@@ -54,11 +54,14 @@ const SpecificEventType = () => {
                         <div className="map-content" style={{ top: "80px", left: "90px" }}>
                             {"Your \n location"}
                         </div>
+                       
                         <img src={eventLocation} alt="el" className="map-pin" style={{ top: "200px", left: "170px" }}/>
                         <div className="map-content" style={{ top: "215px", left: "195px" }}>
                             {"Katie"}
                         </div>
+                        <button className="pin-click" onClick={() => navigate('/meetup/coffee/manhattan-coffee-run')}>
                         <img src={eventLocation} alt="el" className="map-pin" style={{ top: "20px", left: "160px" }}/>
+                        </button>
                         <div className="map-content" style={{ top: "35px", left: "180px" }}>
                             {"Liz"}
                         </div>

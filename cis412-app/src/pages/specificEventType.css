@@ -184,3 +184,7 @@
 .map-container {
   position: relative;
 }
+
+.pin-click {
+  cursor: pointer;
+}
