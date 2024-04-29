@@ -8,44 +8,50 @@ import spiral from './images/LooperGroup.png';
 import pt from './images/Topology-2.png';
 import rt from './images/Topology-1.png';
 import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
 
 const LandingPage = () => {
   const containerStyle = {
-    maxWidth: '375px', /* iPhone width */
-    maxHeight: '812px', /* iPhone height */
-    margin: '0 auto', /* Center the content horizontally */
+    maxWidth: '50vh', /*'375px'*/
+    maxHeight: '100vh',
+    margin: '0 auto',
     backgroundColor: '#f7f3f0', /* Optional: Set a background color */
   };
+
+  useEffect(() => {
+    // Disable scrolling when the component mounts
+    document.body.style.overflow = 'hidden';
+    // Re-enable scrolling when the component unmounts
+    return () => {
+      document.body.style.overflow = 'visible';
+    };
+  }, []);
   return (
     <div style={containerStyle}>
       <header className="App-header">
-      <div style={{  top: '0px', left: '92px' }} className="background-image"> <img src={spiral} alt="spiral" /> </div>
-      <div style={{  top: '40px', left: '0px' }} className="background-image"><img src={logo} style={{ height: '70px' }} alt="Logo" /> </div>
-      <div style={{ height: '40px' }}></div> {/* Empty vertical box */}
-      <div style={{  top: '150px', left: '-120px' }} className="background-image"> <img src={spark} style={{ height: '70px' }} alt="spark" /> </div>
+      <div style={{  top: '-5vh', left: '15vh' }} className="background-image"> <img src={spiral} alt="spiral" /> </div>
+      <div style={{  top: '5vh', left: '0vh' }} className="background-image"><img src={logo} style={{ height: '70px' }} alt="Logo" /> </div>
+      <div style={{ height: '1vh' }}></div> {/* Empty vertical box */}
+      <div style={{  top: '24vh', left: '-15vh' }} className="background-image"> <img src={spark} style={{ height: '70px' }} alt="spark" /> </div>
       <div className="inner-container">
         <span className="text-left">Welcome to</span>
-        <div style={{ height: '1px' }}></div> {/* Empty vertical box */}
+        <div style={{ height: '1vh' }}></div> {/* Empty vertical box */}
         <span className="text-right">traveleress</span>
       </div>
       
-      <div style={{  top: '550px', left: '-110px'}} className="background-image"> <img src={redSymbol} alt="redSymbol" /> </div>
-      <div style={{  top: '220px', left: '-80px'}} className="background-image"> <img src={rt} style={{ height: '190px' }} alt="rt" /> </div>
+      <div style={{  top: '75vh', left: '-10vh'}} className="background-image"> <img src={redSymbol} alt="redSymbol" /> </div>
+      <div style={{  top: '35vh', left: '-8vh'}} className="background-image"> <img src={rt} alt="rt" /> </div>
 
 
-      <div style={{ height: '90px' }}></div> {/* Empty vertical box */}
-      <div className="button">Let's explore </div> 
-      <div style={{ height: '25px' }}></div> {/* Empty vertical box */}
-      <p style={{ fontSize: '15px' }}> or </p>
-      <div style={{ height: '20px' }}></div> {/* Empty vertical box */}
-      <Link to="/eventslanding"><div className="button">Meet up!  </div> </Link>
-      <div style={{ height: '140px' }}></div> {/* Empty vertical box */}
+      <div style={{ height: '11vh' }}></div> {/* Empty vertical box */}
+      <Link to="/hostEvent"><div className="button">Host your own event!  </div> </Link>
+      <div style={{ height: '5vh' }}></div> {/* Empty vertical box */}
+      <p style={{ fontSize: '2vh' }}> or </p> {/* 2vh = 15px */}
+      <div style={{ height: '4vh' }}></div> {/* Empty vertical box */}
+      <Link to="/eventslanding"><div className="button">Explore meet-ups!  </div> </Link>
+      <div style={{ height: '15vh' }}></div> {/* Empty vertical box */}
 
-      <div style={{  top: '330px', left: '77px'}} className="background-image"> <img src={pt} style={{ height: '360px' }} alt="pt" /> </div>
-
-
-      
-        
+      <div style={{  top: '50vh', left: '19vh'}} className="background-image"> <img src={pt} style={{ height: '360px' }} alt="pt" /> </div>
       </header>
 
     </div>

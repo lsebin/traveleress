@@ -4,7 +4,7 @@ import './App.css';
 import LandingPage from "./pages/LandingPage";
 import EventsLandingPage from "./pages/EventsLandingPage";
 import Events from "./pages/events";
-
+import Home from "./pages/home";
 import UserProfile from './pages/profiles/userProfile';
 
 import CoffeeType from './pages/specificEventTypes/coffeeType';
@@ -63,6 +63,7 @@ function App() {
 
             <Route exact path="/events" element={<Events />} />
             <Route exact path="/userProfile" element={<UserProfile />} />
+            <Route exact path="/hostEvent" element={<Home />} />
 
             {/* COFFEE */}
             <Route exact path="/coffeeType" element={<CoffeeType />}/>

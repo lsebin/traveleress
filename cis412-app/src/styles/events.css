@@ -23,12 +23,18 @@
     font-size: small;
     margin-bottom: 0.5em;
     border: none;
+    text-align:center;
+    width:100px;
+    font-weight:300;
     
 }
 
+
 .card-title {
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 20px;
 }
+
 
 .learnMore {
     background-color: white;

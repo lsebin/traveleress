@@ -1,7 +1,8 @@
 import React from "react";
 import mapImage from '../images/maps.jpeg';
 import '../styles/events.css';
-import star from '../icons/star.svg';
+import './Landing.css';
+import star from '../icons/add.svg';
 import globe from '../icons/earth.svg';
 import calendar from '../icons/calendar.svg';
 import person from '../icons/user-circle.svg';
@@ -10,15 +11,20 @@ import { useNavigate } from 'react-router-dom';
 const Events = () => {
     const navigate = useNavigate();
     const containerStyle = {
-        maxWidth: '375px',
-        maxHeight: '812px',
-        margin: '0 auto',
-        backgroundColor: '#f7f3f0',
+        maxWidth: '50vh', /*'375px'*/
+        maxHeight: '100vh',
+        // maxWidth: '375px', /* iPhone width */
+        // maxHeight: '812px', /* iPhone height */
+        margin: '0 auto', /* Center the content horizontally */
+        backgroundColor: '#f7f3f0', /* Optional: Set a background color */
+        position: 'static'
     };
 
     return (
         <div style={containerStyle}>
-            <div>
+            <header className="App-header">
+            <div className="header-status"> Your Events</div>
+            {/* <div>
                 <div class="row justify-content-between">
                     <div class="col-10">
                         <h1 class="title">Your Events</h1>
@@ -27,85 +33,72 @@ const Events = () => {
                         <button class="plusButton">+</button>
                     </div>       
                 </div>
-            </div>
+            </div> */}
         
          
-            <h3 class="subheader">Hosting</h3>
-                <div class="col">
-                    <div class="card">
-                        <div class="row g-0">
-                            <div class="col-7">
-                                <div class="card-body text-start">
-                                    <h5 class="card-title">Coffee chats!</h5>
-                                    <button className="dateButton">26/2/24</button>
-                                    <p>Starbucks</p>
-                                    <button class="learnMore">Learn more</button>
-                                </div>
-                            </div>
-                            <div class="col-5">
-                                <img src={mapImage} class="card-img-top map img-fluid rounded-start" alt="map"></img>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div style={{ fontSize: '25px', textAlign: 'left', fontWeight:'500', marginRight: '25vh'}}>Hosting </div>
+        <div class = "event-card">
+            <div style={{width: '175px', marginLeft:'10px', textAlign:'left'}}> 
+                <div class="card-title">Coffee chats!</div>
+                <div className="dateButton">2024/05/04</div>
+                <div style={{ fontSize: '14px', fontWeight:'300', width:'140px'}}>3901 Walnut St, Philadelphia, PA 19104</div>
+            </div>
+    
+            <div style={{width: '175px',marginLeft:'auto', marginRight:'auto'}}>
+                <img src={mapImage} class="card-img-top map img-fluid rounded-start" alt="map" style={{width:'80%'}}></img>
+                <div style ={{height: '20px'}}> </div>
+            </div>
+        </div>    
 
-            <h3 class="subheader">Guesting</h3>
-                <div class="col">
-                    <div class="card">
-                        <div class="row g-0">
-                            <div class="col-7">
-                                <div class="card-body text-start">
-                                    <h5 class="card-title">Thrift Marketing</h5>
-                                    <button className="dateButton">27/2/24</button>
-                                    <p>3820 Locust Walk</p>
-                                    <button class="learnMore">Learn more</button>
-                                </div>
-                            </div>
-                            <div class="col-5">
-                                <img src={mapImage} class="card-img-top map" alt="map"></img>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+         <div style={{height: '25px'}}>  </div>      
 
-                <div class="col">
-                    <div class="card">
-                        <div class="row g-0">
-                            <div class="col-7">
-                                <div class="card-body text-start">
-                                    <h5 class="card-title">Dance Class</h5>
-                                    <button class="dateButton">27/2/24</button>
-                                    <p>912 Spring Street</p>
-                                    <button class="learnMore">Learn more</button>
-                                </div>
-                            </div>
-                            <div class="col-5">
-                                <img src={mapImage} class="card-img-top map" alt="map"></img>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="seeMore">See more</button>
-                <div className="nav-bar">
-                    <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
+        <div style={{ fontSize: '25px', textAlign: 'left', fontWeight:'500', marginRight: '25vh'}}>Guesting </div>
+        <div class = "event-card">
+            <div style={{width: '175px', marginLeft:'10px', textAlign:'left'}}> 
+                <div class="card-title">Thrift Marketing </div>
+                <div className="dateButton">2024/05/25</div>
+                <div style={{ fontSize: '14px', fontWeight:'300', width:'140px'}}>3820 Locust Walk, Philadelphia, PA 19104</div>
+            </div>
+    
+            <div style={{width: '175px',marginLeft:'auto', marginRight:'auto'}}>
+                <img src={mapImage} class="card-img-top map img-fluid rounded-start" alt="map" style={{width:'80%'}}></img>
+                <div style ={{height: '20px'}}> </div>
+            </div>
+        </div>  
+        <div class = "event-card">
+            <div style={{width: '175px', marginLeft:'10px', textAlign:'left'}}> 
+                <div class="card-title">Dance Class </div>
+                <div className="dateButton">2024/06/02</div>
+                <div style={{ fontSize: '14px', fontWeight:'300', width:'140px'}}>912 Spring Street, Philadelphia, PA 19104</div>
+            </div>
+    
+            <div style={{width: '175px',marginLeft:'auto', marginRight:'auto'}}>
+                <img src={mapImage} class="card-img-top map img-fluid rounded-start" alt="map" style={{width:'80%'}}></img>
+                <div style ={{height: '20px'}}> </div>
+            </div>
+        </div>  
+        <div style={{ height: '20vh' }}></div> {/* Empty vertical box */}    
+
+                <div className="nav-bar" style={{position: 'fixed', bottom:'0vh', width:'100%'}}>
+                    <button className="nav-icon-button" onClick={() => navigate('/hostEvent')}>
                         <img src={star} style={{ height: '25px' }} alt="star" />
                     </button>
                     <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
-                        <img src={globe} style={{ height: '25px' }} alt="globe" />
+                    <img src={globe} style={{ height: '25px' }} alt="globe" />
                     </button>
                     <button className="nav-icon-button" onClick={() => navigate('/events')}>
                     <div className="nav-button">
-                        <img src={calendar} style={{ height: '25px' }} alt="calendar" />
-                        <span>Events</span>
-                    </div>
+                            <img src={calendar} style={{ height: '25px' }} alt="calendar" />
+                            <span>Events</span>
+                        </div>
                     </button>
-                    <button className="nav-icon-button" onClick={() => navigate('/userProfile')}>
-                            <img src={person} style={{ height: '25px' }} alt="person" />
-                        
+                    <button className="nav-icon-button" onClick={() => navigate('/userprofile')}>
+                        <img src={person} style={{ height: '25px' }} alt="person" />
                     </button>
                 </div>
+                </header>
             </div>
-            
+           
         // </div>
     );
 };
