@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import './profile.css';
 import pencil from '../../icons/pencil.svg';
-import pfp from '../../icons/Group 16.svg';
 import face_smile from '../../icons/face-smile.svg';
 import home from '../../icons/home.svg';
 import marker_pin from '../../icons/marker_pin.svg';
@@ -15,6 +14,7 @@ import calendar from '../../icons/calendar.svg';
 import person from '../../icons/user-circle.svg';
 import { useNavigate } from 'react-router-dom';
 import ErrorUnderDevelopment from "../popUps/errorUnderDevelopment";
+import viviL from "../../images/viviL.jpg";
  
 const UserProfile = () => {
     const navigate = useNavigate();
@@ -43,7 +43,7 @@ const UserProfile = () => {
                         )}
                     </div>
                     <div style={{ height: '15px' }}></div>
-                    <img src={pfp} className="profile-pic" alt="user-profile-pic"></img>
+                    <img src={viviL} className="profile-pic" alt="user-profile-pic"></img>
                     <div style={{ height: '15px' }}></div>
                     <div className="name">Vivi Li</div>
                     <div style={{ height: '6px' }}></div>
@@ -96,24 +96,24 @@ const UserProfile = () => {
                         </div>
                     </div>
                 </div>
-                <div className="nav-bar">
-                    <button className="nav-icon-button" onClick={() => {}}>
-                        <img src={star} style={{ height: '25px' }} alt="star" />
-                    </button>
-                    <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
-                        <img src={globe} style={{ height: '25px' }} alt="globe" />
-                    </button>
-                    <button className="nav-icon-button" onClick={() => navigate('/events')}>
-                        <img src={calendar} style={{ height: '25px' }} alt="calendar" />
-                    </button>
-                    <button className="nav-icon-button" onClick={() => navigate('/userProfile')}>
-                        <div className="nav-button">
-                            <img src={person} style={{ height: '25px' }} alt="person" />
-                            <span>Profile</span>
-                        </div>
-                    </button>
-                </div>
             </header>
+            <div className="nav-bar">
+`               <button className="nav-icon-button" onClick={() => {}}>
+                    <img src={star} style={{ height: '25px' }} alt="star" />
+                </button>
+                <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
+                    <img src={globe} style={{ height: '25px' }} alt="globe" />
+                </button>
+                <button className="nav-icon-button" onClick={() => navigate('/events')}>
+                    <img src={calendar} style={{ height: '25px' }} alt="calendar" />
+                </button>
+                <button className="nav-icon-button" onClick={() => navigate('/userProfile')}>
+                    <div className="nav-button">
+                        <img src={person} style={{ height: '25px' }} alt="person" />
+                        <span>Profile</span>
+                    </div>
+                </button>
+            </div>`
         </div>
     );
 };

@@ -45,7 +45,7 @@ const ShopType = () => {
                 </div>
                 <div className="App-body">
                     <div style={{ height: '30px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/shop/shop-1')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Thrifting haul around NYC!</h2>
@@ -64,7 +64,7 @@ const ShopType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/shop/shop-2')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Explore 5th Ave with me :D</h2>
@@ -77,7 +77,7 @@ const ShopType = () => {
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
-                                <button className="learn-more" onClick={() => navigate('/meetup/coffee/manhattan-coffee-run')}>
+                                <button className="learn-more">
                                     Learn More
                                 </button>
                                 <div className="participation-box">1/4</div>
@@ -85,7 +85,7 @@ const ShopType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/shop/shop-3')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Check out my fav record shop</h2>
@@ -104,7 +104,7 @@ const ShopType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/shop/shop-4')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Time Square Nike Bulk Shop</h2>

@@ -1,12 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './specificEventType.css';
 import katie_map from '../../images/katie_map.png';
-import user_circle from '../../icons/user-circle.svg';
 import star from '../../icons/star.svg';
 import globe from '../../icons/earth.svg';
 import calendar from '../../icons/calendar.svg';
 import person from '../../icons/user-circle.svg';
 import { useNavigate } from 'react-router-dom';
+import lizA from '../../images/lizA.jpeg';
+import ashleyT from '../../images/ashleyT.jpg';
+import sebinL from '../../images/sebinL.jpg';
+import katieL from '../../images/katieL.jpg';
 
 const CoffeeType = () => {
     const navigate = useNavigate();
@@ -45,14 +48,16 @@ const CoffeeType = () => {
                 </div>
                 <div className="App-body">
                     <div style={{ height: '30px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/coffee/coffee-1')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Cute coffee study sesh :)</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={katieL} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer">Katie L.</p>
                                 </div>
                             </div>
@@ -71,7 +76,9 @@ const CoffeeType = () => {
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={lizA} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer">Liz A.</p>
                                 </div>
                             </div>
@@ -85,14 +92,16 @@ const CoffeeType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/coffee/coffee-3')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Check out this new coffee shop!</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={ashleyT} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer">Ashley T.</p>
                                 </div>
                             </div>
@@ -104,14 +113,16 @@ const CoffeeType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/coffee/coffee-4')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Sunny day! Care for a coffee date?</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={sebinL} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer">Sebin L.</p>
                                 </div>
                             </div>

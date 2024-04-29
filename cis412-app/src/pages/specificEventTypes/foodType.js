@@ -1,12 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './specificEventType.css';
 import katie_map from '../../images/katie_map.png';
-import user_circle from '../../icons/user-circle.svg';
 import star from '../../icons/star.svg';
 import globe from '../../icons/earth.svg';
 import calendar from '../../icons/calendar.svg';
 import person from '../../icons/user-circle.svg';
 import { useNavigate } from 'react-router-dom';
+import lizA from '../../images/lizA.jpeg';
+import ashleyT from '../../images/ashleyT.jpg';
+import sebinL from '../../images/sebinL.jpg';
+import katieL from '../../images/katieL.jpg';
 
 const FoodType = () => {
     const navigate = useNavigate();
@@ -33,10 +36,6 @@ const FoodType = () => {
         color: 'white'
     }
 
-    const fillWhiteStyle = {
-        filter: 'invert(100%)',
-    }
-
     return (
         <div style={containerStyle}>
             <header className="App-header">
@@ -59,13 +58,15 @@ const FoodType = () => {
                 <div className="App-body">
                     <div style={{ height: '30px' }}></div>
                     <div className="event-box" style= {eventBoxStyle}>
-                        <img src={katie_map} className="map-style" alt="katie_map" />
+                        <img src={katie_map} onClick={() => navigate('/meetup/food/food-1')} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title" style={textColorWhiteStyle}>K-Town boba run!</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} style={fillWhiteStyle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={sebinL} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer" style={textColorWhiteStyle}>Sebin L.</p>
                                 </div>
                             </div>
@@ -77,20 +78,22 @@ const FoodType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/food/food-2')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title" style={textColorWhiteStyle}>Creative Thai: Mitr Thai</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} style={fillWhiteStyle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={katieL} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer" style={textColorWhiteStyle}>Katie L.</p>
                                 </div>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
-                                <button className="learn-more" onClick={() => navigate('/meetup/coffee/manhattan-coffee-run')}>
+                                <button className="learn-more">
                                     Learn More
                                 </button>
                                 <div className="participation-box" style={borderAndTextWhiteStyle}>1/3</div>
@@ -98,14 +101,16 @@ const FoodType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/food/food-3')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title" style={textColorWhiteStyle}>Spicy ramen contest!</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} style={fillWhiteStyle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={ashleyT} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer" style={textColorWhiteStyle}>Ashley T.</p>
                                 </div>
                             </div>
@@ -117,14 +122,16 @@ const FoodType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/food/food-4')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title" style={textColorWhiteStyle}>Jamaican food in Queens?</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} style={fillWhiteStyle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={lizA} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer" style={textColorWhiteStyle}>Liz A.</p>
                                 </div>
                             </div>

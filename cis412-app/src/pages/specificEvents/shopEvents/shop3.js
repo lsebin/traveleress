@@ -13,7 +13,7 @@ import SubmitSuccessful from "../../popUps/submitSuccessful";
 import ErrorUnderDevelopment from "../../popUps/errorUnderDevelopment";
 import LAProfile from "../../profiles/LAProfile";
 
-const Coffee2Page = () => {
+const Shop3Page = () => {
     const navigate = useNavigate();
     const [showSignUpSuccessful, setShowSignUpSuccessful] = useState(false);
     const [showSubmitSuccessful, setShowSubmitSuccessful] = useState(false);
@@ -55,9 +55,9 @@ const Coffee2Page = () => {
         <div style={containerStyle}>
             <header className="meetup-header">
                 <div className="back-run">
-                    <Link to="/coffeeType" className="back">&lt;</Link>
+                    <Link to="/shopType" className="back">&lt;</Link>
                 </div>
-                <p style={{marginTop: '4px', }}>Manhattan-view Coffee run!</p>
+                <p style={{marginTop: '4px', }}>Check out my fav record shop</p>
             </header>
             <section className="meetup-details">
                 <div className="host-info">
@@ -81,14 +81,16 @@ const Coffee2Page = () => {
                             <div>Capacity</div>
                         </div>
                         <div class="col-2">
-                            <div className="participation-box-event">3/5</div>
+                            <div className="participation-box-event">7/20</div>
                         </div>
                     </div>
                 </div>
                 <div style={{ height: '5px' }}></div>
                 <div className="event-desc">
-                    We will grab a drink at independent coffee roaster in Brooklyn and take a walk 
-                    to the riverside near Brooklyn Bridge.
+                    This record shop in my hometown neighborhood is literally the best in the world. 
+                    So many vintage vinyls and many from musicians in the local area! The store is going
+                    under renovation this summer, so take your chance finding your favorite record here
+                    before that! 
                 </div>
                 <button className="abutton" onClick={handleSignUpClick}>Sign up</button>
                 <div style={{ height: '10px' }}></div>
@@ -100,12 +102,8 @@ const Coffee2Page = () => {
                     <div style={{ height: '5px' }}></div>
                     <ul className="qa-list">
                         <li>
-                            <strong>Q:</strong> Are we meeting at the coffee shop? 
-                            <p><strong>A:</strong> Yes! Bring your camera to take pictures of NYC :)!</p>
-                        </li>
-                        <li>
-                            <strong>Q:</strong> Is there parking available?
-                            <div><strong>A:</strong> Yes, there's a parking lot adjacent to the coffee shop.</div>
+                            <strong>Q:</strong> I can't be in NYC before the summer! When does their renovation end? 
+                            <p><strong>A:</strong> Last I asked is around August, but stay tuned! </p>
                         </li>
                     </ul>
                 </div>
@@ -150,4 +148,4 @@ const Coffee2Page = () => {
     );
 };
  
-export default Coffee2Page;
+export default Shop3Page;

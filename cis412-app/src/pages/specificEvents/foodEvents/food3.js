@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import mapImage from '../../../images/maps.jpeg';
-import profile from '../../../images/lizA.jpeg';
+import profile from '../../../images/ashleyT.jpg';
 import '../../../styles/meetup.css';
 import star from '../../../icons/star.svg';
 import globe from '../../../icons/earth.svg';
@@ -11,9 +11,9 @@ import { useNavigate } from 'react-router-dom';
 import SignUpSuccessful from "../../popUps/signUpSuccessful";
 import SubmitSuccessful from "../../popUps/submitSuccessful";
 import ErrorUnderDevelopment from "../../popUps/errorUnderDevelopment";
-import LAProfile from "../../profiles/LAProfile";
+import ATProfile from "../../profiles/ATProfile";
 
-const Coffee2Page = () => {
+const Food3Page = () => {
     const navigate = useNavigate();
     const [showSignUpSuccessful, setShowSignUpSuccessful] = useState(false);
     const [showSubmitSuccessful, setShowSubmitSuccessful] = useState(false);
@@ -55,9 +55,9 @@ const Coffee2Page = () => {
         <div style={containerStyle}>
             <header className="meetup-header">
                 <div className="back-run">
-                    <Link to="/coffeeType" className="back">&lt;</Link>
+                    <Link to="/foodType" className="back">&lt;</Link>
                 </div>
-                <p style={{marginTop: '4px', }}>Manhattan-view Coffee run!</p>
+                <p style={{marginTop: '4px', }}>Spicy ramen contest!</p>
             </header>
             <section className="meetup-details">
                 <div className="host-info">
@@ -68,9 +68,9 @@ const Coffee2Page = () => {
                              onClick={handleHostClick} />
                     </div>
                     {showHost && (
-                        <LAProfile onClose={handleCloseHost} />
+                        <ATProfile onClose={handleCloseHost} />
                     )}      
-                    <p style={{fontSize: '20px'}}>Liz A.</p>
+                    <p style={{fontSize: '20px'}}>Ashley T.</p>
                 </div>
                 <div className="event-info-specific">
                     <div class="row justify-content-between"> 
@@ -81,14 +81,14 @@ const Coffee2Page = () => {
                             <div>Capacity</div>
                         </div>
                         <div class="col-2">
-                            <div className="participation-box-event">3/5</div>
+                            <div className="participation-box-event">2/10</div>
                         </div>
                     </div>
                 </div>
                 <div style={{ height: '5px' }}></div>
                 <div className="event-desc">
-                    We will grab a drink at independent coffee roaster in Brooklyn and take a walk 
-                    to the riverside near Brooklyn Bridge.
+                    Like spicy food? Like ramen? Like spicy ramen? This contest is FOR YOU! Finish this
+                    restaurant's level-20 spicy ramen in under 15 minutes for free!!
                 </div>
                 <button className="abutton" onClick={handleSignUpClick}>Sign up</button>
                 <div style={{ height: '10px' }}></div>
@@ -100,12 +100,12 @@ const Coffee2Page = () => {
                     <div style={{ height: '5px' }}></div>
                     <ul className="qa-list">
                         <li>
-                            <strong>Q:</strong> Are we meeting at the coffee shop? 
-                            <p><strong>A:</strong> Yes! Bring your camera to take pictures of NYC :)!</p>
+                            <strong>Q:</strong> Is level 20 their highest level D: 
+                            <p><strong>A:</strong> I heard they go up to 25...</p>
                         </li>
                         <li>
-                            <strong>Q:</strong> Is there parking available?
-                            <div><strong>A:</strong> Yes, there's a parking lot adjacent to the coffee shop.</div>
+                            <strong>Q:</strong> Is hospital fee included 
+                            <p><strong>A:</strong> BYOH</p>
                         </li>
                     </ul>
                 </div>
@@ -150,4 +150,4 @@ const Coffee2Page = () => {
     );
 };
  
-export default Coffee2Page;
+export default Food3Page;

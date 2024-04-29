@@ -22,6 +22,12 @@
   width: 100%;
 }
 
+.avatar-small img {
+  width: 30px;
+  height: auto;
+  margin-bottom: 6px;
+}
+
 .back-button {
   border: none;
   font-size: 30px; /* Adjust size as needed */
@@ -101,11 +107,12 @@
   width: 375px;
   background: white;
   border-top: 1.5px solid  black;
-  padding-bottom: 15px;
-  padding-top: 15px;
+  /* padding-bottom: 15px;
+  padding-top: 15px; */
   justify-content: space-evenly;
   bottom: 0;
   align-items: center;
+  position: relative;
 }
 
 .nav-button {

@@ -7,9 +7,9 @@ import marker_pin from '../../icons/marker_pin.svg';
 import instagram from '../../icons/instagram.svg';
 import facebook from '../../icons/facebook.svg';
 import tiktok from '../../icons/tiktok.svg';
-import profile from '../../images/lizA.jpeg';
+import profile from '../../images/katieL.jpg';
  
-const LAProfile = ({ onClose }) => {
+const KLProfile = ({ onClose }) => {
 
     return (
         <div className="popup-container">
@@ -25,17 +25,17 @@ const LAProfile = ({ onClose }) => {
                             </div>
                         </div>
                         <div style={{ height: '15px' }}></div>
-                        <div className="name">Liz A.</div>
+                        <div className="name">Katie L.</div>
                         <div style={{ height: '6px' }}></div>
                         <div className="bio-box">
                             <img src={face_smile} alt="Smile" className="bio-icon" />
-                            <span className="bio-age">25</span>
+                            <span className="bio-age">27</span>
                             <div className="bio-separator"></div>
                             <img src={home} alt="Home" className="bio-icon" />
-                            <span className="bio-city">Houston</span>
+                            <span className="bio-city">Miami</span>
                             <div className="bio-separator"></div>
                             <img src={marker_pin} alt="Marker" className="bio-icon" />
-                            <span className="bio-city">New York</span>
+                            <span className="bio-city">Boston</span>
                         </div>
                         <div style={{ height: '5px' }}></div>
                     </div>
@@ -43,9 +43,9 @@ const LAProfile = ({ onClose }) => {
                         <div class="info-box">
                             <h3>Hobbies:</h3>
                             <ul>
-                                <li>Trying new coffee shops</li>
-                                <li>Thrifting</li>
-                                <li>Going on road trips (yeehaw)</li>
+                                <li>Volunteering at an animal shelter</li>
+                                <li>Fine dining explorer</li>
+                                <li>Surfing</li>
                             </ul>
                         </div>
                     </div>
@@ -53,13 +53,13 @@ const LAProfile = ({ onClose }) => {
                         <div class="info-box">
                             <h3>Recent trips:</h3>
                             <ul>
-                                <li>Toronto, 02/18/24 - 02/22/24</li>
-                                <li>Maine, 10/08/23 - 10/15/23</li>
+                                <li>New Haven, 03/09/24 - 03/14/24</li>
                             </ul>
                             <div style={{ height: '7px' }}></div>
                             <h3>Upcoming trips:</h3>
                             <ul>
-                                <li>Houston, 05/14/24 - 06/07/24</li>
+                                <li>New York City, 05/11/24 - 05/19/24</li>
+                                <li>San Francisco, 08/24/24 - 09/04/24</li>
                             </ul>
                         </div>
                     </div>
@@ -68,11 +68,11 @@ const LAProfile = ({ onClose }) => {
                             <h3>Socials:</h3>
                             <div className="social-icons">
                                 <img src={instagram} alt="Instagram" className="social-icon" />
-                                <span className="social-handle">liz_a</span>
+                                <span className="social-handle">ktl</span>
                                 <img src={facebook} alt="Facebook" className="social-icon" />
-                                <span className="social-handle">Liz A</span>
+                                <span className="social-handle">Katie L</span>
                                 <img src={tiktok} alt="TikTok" className="social-icon" />
-                                <span className="social-handle">liz.a</span>
+                                <span className="social-handle">ktl</span>
                             </div>
                         </div>
                     </div>
@@ -82,4 +82,4 @@ const LAProfile = ({ onClose }) => {
     );
 };
  
-export default LAProfile;
+export default KLProfile;
