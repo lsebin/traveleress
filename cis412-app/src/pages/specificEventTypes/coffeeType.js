@@ -1,15 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './specificEventType.css';
-import katie_map from '../images/katie_map.png';
-import user_circle from '../icons/user-circle.svg';
-import bookmark from '../icons/bookmark.svg';
-import star from '../icons/star.svg';
-import globe from '../icons/earth.svg';
-import calendar from '../icons/calendar.svg';
-import person from '../icons/user-circle.svg';
+import katie_map from '../../images/katie_map.png';
+import star from '../../icons/star.svg';
+import globe from '../../icons/earth.svg';
+import calendar from '../../icons/calendar.svg';
+import person from '../../icons/user-circle.svg';
 import { useNavigate } from 'react-router-dom';
+import lizA from '../../images/lizA.jpeg';
+import ashleyT from '../../images/ashleyT.jpg';
+import sebinL from '../../images/sebinL.jpg';
+import katieL from '../../images/katieL.jpg';
 
-const SpecificEventType = () => {
+const CoffeeType = () => {
     const navigate = useNavigate();
 
     const containerStyle = {
@@ -21,7 +23,8 @@ const SpecificEventType = () => {
 
     const eventBoxStyle = {
         padding: '10px', 
-        textAlign: 'left'
+        textAlign: 'left',
+        backgroundColor: '#f7cdfa'
     }
 
     return (
@@ -35,7 +38,7 @@ const SpecificEventType = () => {
                             justifyContent: 'center', }}>
                     <div style={{ height: '10px' }}></div>
                     <div style={{ display: 'flex', alignItems: 'center', width: '100%'}}>
-                        <button className="back-button" onClick={() => {"/eventslanding" }}>
+                        <button className="back-button" onClick={() => navigate('/eventslanding')}>
                             &larr;
                         </button>
                         <span className="header-status-coffee">Coffee</span>
@@ -45,17 +48,18 @@ const SpecificEventType = () => {
                 </div>
                 <div className="App-body">
                     <div style={{ height: '30px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/coffee/coffee-1')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Cute coffee study sesh :)</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={katieL} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer">Katie L.</p>
                                 </div>
-                                <img src={bookmark} style={{ marginLeft: "auto" }} alt="saved" />
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
@@ -65,21 +69,22 @@ const SpecificEventType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/coffee/coffee-2')} style={eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Manhattan-view Coffee run!</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={lizA} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer">Liz A.</p>
                                 </div>
-                                <img src={bookmark} style={{ marginLeft: "auto" }} alt="saved" />
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
-                                <button className="learn-more" onClick={() => navigate('/meetup/coffee/manhattan-coffee-run')}>
+                                <button className="learn-more" onClick={() => navigate('/meetup/coffee/coffee-2')}>
                                     Learn More
                                 </button>
                                 <div className="participation-box">3/5</div>
@@ -87,17 +92,18 @@ const SpecificEventType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/coffee/coffee-3')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Check out this new coffee shop!</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={ashleyT} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer">Ashley T.</p>
                                 </div>
-                                <img src={bookmark} style={{ marginLeft: "auto" }} alt="saved" />
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
@@ -107,17 +113,18 @@ const SpecificEventType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="event-box" style= {eventBoxStyle}>
+                    <div className="event-box" onClick={() => navigate('/meetup/coffee/coffee-4')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Sunny day! Care for a coffee date?</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={sebinL} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer">Sebin L.</p>
                                 </div>
-                                <img src={bookmark} style={{ marginLeft: "auto" }} alt="saved" />
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
@@ -131,7 +138,7 @@ const SpecificEventType = () => {
                         <button className="nav-icon-button">
                             <img src={star} style={{ height: '25px' }} alt="star" />
                         </button>
-                        <button className="nav-icon-button" onClick={() => {'/eventslanding'}}>
+                        <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
                             <div className="nav-button">
                                 <img src={globe} style={{ height: '25px' }} alt="globe" />
                                 <span>Meet up</span>
@@ -140,14 +147,14 @@ const SpecificEventType = () => {
                         <button className="nav-icon-button" onClick={() => navigate('/events')}>
                             <img src={calendar} style={{ height: '25px' }} alt="calendar" />
                         </button>
-                        <button className="nav-icon-button" onClick={() => navigate('/profile')}>
+                        <button className="nav-icon-button" onClick={() => navigate('/userProfile')}>
                             <img src={person} style={{ height: '25px' }} alt="person" />
                         </button>
                     </div>
                 </div>
             </header>
-        </div>
+        </div> 
     );
 }
 
-export default SpecificEventType;
+export default CoffeeType;
