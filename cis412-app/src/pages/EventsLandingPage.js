@@ -1,4 +1,3 @@
-
 import 'bootstrap/dist/css/bootstrap.css';
 import './Landing.css';
 import '../styles/events.css';
@@ -9,14 +8,19 @@ import calendar from './images/Vector.png';
 import person from './images/Icon.png';
 import { useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-
-  
+import ErrorUnderDevelopment from "./popUps/errorUnderDevelopment";
 
 const EventsLandingPage = () => {
   const navigate = useNavigate();
-
+  const [showError, setShowError] = useState(false);
+  const handleErrorClick = () => {
+    setShowError(true);
+  };
+  const handleCloseError = () => {
+    setShowError(false);
+  };
   const containerStyle = {
-    maxWidth: '50vh', /*'375px'*/
+    maxWidth: '70vh', /*'375px'*/
     maxHeight: '100vh',
     // maxWidth: '375px', /* iPhone width */
     // maxHeight: '812px', /* iPhone height */
@@ -45,7 +49,7 @@ const EventsLandingPage = () => {
   return (
     <div style={containerStyle}>
       <header className="App-header">
-      <div className="header-status"> Meet up!</div>
+      <div className="header-status" style={{marginLeft: "-40px"}}> Meet up!</div>
       <div className="App-body" style={{textAlign: 'center'}}>
       <div className="landing-outline-box" style= {{border: '2px solid black', padding: '10px'}}>
         <img src={marker} style={{ height: '25px'}} alt="marker" />
@@ -65,15 +69,10 @@ const EventsLandingPage = () => {
       </div> 
 
       <div style={{ height: '20px' }}></div> {/* Empty vertical box */}
-      <div style={{ fontSize: '14px', textAlign: 'left', fontWeight:'500', marginRight: '130px'}}> Recommended for you </div>
+      <div style={{ fontSize: '16px', textAlign: 'left', fontWeight:'500'}}> Recommended for you </div>
       <div style={{ height: '20px' }}></div> {/* Empty vertical box */}
-
       <div className = "landing-outline-box">
-        <button className ="s-card" style={{ backgroundColor: '#fe755a', width: '300px'}}> Safe Travel </button> 
-      </div>
-
-      <div className = "landing-outline-box">
-        <button className ="s-card" style={{ backgroundColor: '#1f47cd'}} onClick={() => navigate('/foodType')}> Food </button>
+        <button className ="s-card" style={{ backgroundColor: '#fe755a'}} onClick={() => navigate('/foodType')}> Food </button>
         <div style={{ width: '20px' }}></div> {/* Empty vertical box */}
         <button className ="s-card" style={{ backgroundColor: '#f7cdfa', color: 'black'}} onClick={() => navigate('/coffeeType')}> Coffee </button> 
         
@@ -84,7 +83,14 @@ const EventsLandingPage = () => {
         <div style={{ width: '20px' }}></div> {/* Empty vertical box */}
         <button className ="s-card" style={{ backgroundColor: '#4c8d7d'}} onClick={() => navigate('/nightLifeType')}> Night Life </button>
       </div>
-      
+      <button className="abutton" 
+              style={{ width: '40%', marginLeft: '-60px', borderRadius: '25px', marginTop: '20px'}}
+              onClick={handleErrorClick}>
+        See more
+      </button>
+      {showError && (
+          <ErrorUnderDevelopment onClose={handleCloseError} />
+      )}
       <div style={{ height: '45vh' }}></div> {/* Empty vertical box */}
       </div>
 
@@ -92,7 +98,7 @@ const EventsLandingPage = () => {
           <button className="nav-icon-button" onClick={() => navigate('/hostEvent')}>
               <img src={star} style={{ height: '25px' }} alt="star" />
           </button>
-          <button className="nav-icon-button" onClick={() => {/*TODO: Meetup page*/}}>
+          <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
               <div className="nav-button">
                   <img src={globe} style={{ height: '25px' }} alt="globe" />
                   <span>Meet</span>

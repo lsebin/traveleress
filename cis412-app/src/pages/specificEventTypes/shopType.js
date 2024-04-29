@@ -1,19 +1,23 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './specificEventType.css';
-import katie_map from '../../images/katie_map.png';
+import '../Landing.css'
 import user_circle from '../../icons/user-circle.svg';
-import star from '../../icons/star.svg';
+import star from '../../icons/add.svg';
 import globe from '../../icons/earth.svg';
 import calendar from '../../icons/calendar.svg';
 import person from '../../icons/user-circle.svg';
 import { useNavigate } from 'react-router-dom';
+import thrifting1 from '../../images/thrifting1.png';
+import thrifting2 from '../../images/thrifting2.png';
+import thrifting3 from '../../images/thrifting3.png';
+import thrifting4 from '../../images/thrifting4.png';
 
 const ShopType = () => {
     const navigate = useNavigate();
 
     const containerStyle = {
-        maxWidth: '375px',
-        maxHeight: '812px',
+        maxWidth: '70vh',
+        maxHeight: '100vh',
         margin: '0 auto',
         backgroundColor: '#f7f3f0',
     };
@@ -26,8 +30,7 @@ const ShopType = () => {
 
     return (
         <div style={containerStyle}>
-            <header className="App-header">
-                <div style={{backgroundColor: '#fec37d',
+            <div style={{backgroundColor: '#fec37d',
                             width: '100%',
                             display: 'flex', // Use flexbox for alignment
                             flexDirection: 'column', // Stack children vertically
@@ -41,12 +44,11 @@ const ShopType = () => {
                         <span className="header-status-coffee">Shop</span>
                     </div>
                     <div style={{ height: '10px' }}></div>
-                    <div className="line"></div>
                 </div>
+            <header className="App-header">
                 <div className="App-body">
-                    <div style={{ height: '30px' }}></div>
                     <div className="event-box" onClick={() => navigate('/meetup/shop/shop-1')} style= {eventBoxStyle}>
-                        <img src={katie_map} className="map-style" alt="katie_map" />
+                        <img src={thrifting1} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Thrifting haul around NYC!</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
@@ -65,7 +67,7 @@ const ShopType = () => {
                     </div> 
                     <div style={{ height: '10px' }}></div>
                     <div className="event-box" onClick={() => navigate('/meetup/shop/shop-2')} style= {eventBoxStyle}>
-                        <img src={katie_map} className="map-style" alt="katie_map" />
+                        <img src={thrifting2} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Explore 5th Ave with me :D</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
@@ -86,7 +88,7 @@ const ShopType = () => {
                     </div> 
                     <div style={{ height: '10px' }}></div>
                     <div className="event-box" onClick={() => navigate('/meetup/shop/shop-3')} style= {eventBoxStyle}>
-                        <img src={katie_map} className="map-style" alt="katie_map" />
+                        <img src={thrifting3} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Check out my fav record shop</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
@@ -105,7 +107,7 @@ const ShopType = () => {
                     </div> 
                     <div style={{ height: '10px' }}></div>
                     <div className="event-box" onClick={() => navigate('/meetup/shop/shop-4')} style= {eventBoxStyle}>
-                        <img src={katie_map} className="map-style" alt="katie_map" />
+                        <img src={thrifting4} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Time Square Nike Bulk Shop</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
@@ -123,23 +125,23 @@ const ShopType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="nav-bar">
-                        <button className="nav-icon-button">
-                            <img src={star} style={{ height: '25px' }} alt="star" />
-                        </button>
-                        <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
-                            <div className="nav-button">
-                                <img src={globe} style={{ height: '25px' }} alt="globe" />
-                                <span>Meet up</span>
-                            </div>
-                        </button>
-                        <button className="nav-icon-button" onClick={() => navigate('/events')}>
-                            <img src={calendar} style={{ height: '25px' }} alt="calendar" />
-                        </button>
-                        <button className="nav-icon-button" onClick={() => navigate('/userProfile')}>
-                            <img src={person} style={{ height: '25px' }} alt="person" />
-                        </button>
-                    </div>
+                </div>
+                <div className="nav-bar" style={{position: 'fixed', bottom:'0vh', width:'100%'}}>
+                    <button className="nav-icon-button" onClick={() => navigate('/hostEvent')}>
+                        <img src={star} style={{ height: '25px' }} alt="star" />
+                    </button>
+                    <button className="nav-icon-button" onClick={() => {/*TODO: Meetup page*/}}>
+                        <div className="nav-button">
+                            <img src={globe} style={{ height: '25px' }} alt="globe" />
+                            <span>Meet</span>
+                        </div>
+                    </button>
+                    <button className="nav-icon-button" onClick={() => navigate('/events')}>
+                        <img src={calendar} style={{ height: '25px' }} alt="calendar" />
+                    </button>
+                    <button className="nav-icon-button" onClick={() => navigate('/userprofile')}>
+                        <img src={person} style={{ height: '25px' }} alt="person" />
+                    </button>
                 </div>
             </header>
         </div> 

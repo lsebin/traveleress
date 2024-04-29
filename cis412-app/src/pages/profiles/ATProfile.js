@@ -38,9 +38,7 @@ const ATProfile = ({ onClose }) => {
                             <span className="bio-city">New York</span>
                         </div>
                         <div style={{ height: '5px' }}></div>
-                    </div>
-                    <div className="App-body">
-                        <div class="info-box">
+                        <div class="others-info-box">
                             <h3>Hobbies:</h3>
                             <ul>
                                 <li>Coffee shop hopping</li>
@@ -48,9 +46,7 @@ const ATProfile = ({ onClose }) => {
                                 <li>Hopping</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="App-body">
-                        <div class="info-box">
+                        <div class="others-info-box">
                             <h3>Recent trips:</h3>
                             <ul>
                                 <li>Nashville, 10/02/23 - 10/06/23</li>
@@ -62,9 +58,7 @@ const ATProfile = ({ onClose }) => {
                                 <li>Chicago, 08/03/24 - 08/09/24</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="App-body">
-                        <div class="socials-box">
+                        <div class="other-socials-box">
                             <h3>Socials:</h3>
                             <div className="social-icons">
                                 <img src={instagram} alt="Instagram" className="social-icon" />

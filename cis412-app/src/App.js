@@ -4,6 +4,10 @@ import './App.css';
 import LandingPage from "./pages/LandingPage";
 import EventsLandingPage from "./pages/EventsLandingPage";
 import Events from "./pages/events";
+import HostCoffeePage from './pages/specificEvents/coffeeEvents/hostCoffee';
+import GuestFoodPage from './pages/specificEvents/foodEvents/guestFood';
+import GuestShopPage from './pages/specificEvents/shopEvents/guestShop';
+
 import Home from "./pages/home";
 import UserProfile from './pages/profiles/userProfile';
 
@@ -64,6 +68,10 @@ function App() {
             <Route exact path="/events" element={<Events />} />
             <Route exact path="/userProfile" element={<UserProfile />} />
             <Route exact path="/hostEvent" element={<Home />} />
+
+            <Route exact path="/hostEvent/hostCoffee" element={<HostCoffeePage />} /> 
+            <Route exact path="/guestEvent/guestFood" element={<GuestFoodPage />} /> 
+            <Route exact path="/guestEvent/guestShop" element={<GuestShopPage />} /> 
 
             {/* COFFEE */}
             <Route exact path="/coffeeType" element={<CoffeeType />}/>

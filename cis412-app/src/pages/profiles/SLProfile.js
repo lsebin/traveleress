@@ -38,9 +38,7 @@ const SLProfile = ({ onClose }) => {
                             <span className="bio-city">Tampa</span>
                         </div>
                         <div style={{ height: '5px' }}></div>
-                    </div>
-                    <div className="App-body">
-                        <div class="info-box">
+                        <div class="others-info-box">
                             <h3>Hobbies:</h3>
                             <ul>
                                 <li>Reading</li>
@@ -48,9 +46,7 @@ const SLProfile = ({ onClose }) => {
                                 <li>Running</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="App-body">
-                        <div class="info-box">
+                        <div class="others-info-box">
                             <h3>Recent trips:</h3>
                             <ul>
                                 <li>Naples, 07/30/23 - 08/15/23</li>
@@ -62,9 +58,7 @@ const SLProfile = ({ onClose }) => {
                                 <li>New York City, 05/08/24 - 05/11/24</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="App-body">
-                        <div class="socials-box">
+                        <div class="other-socials-box">
                             <h3>Socials:</h3>
                             <div className="social-icons">
                                 <img src={instagram} alt="Instagram" className="social-icon" />

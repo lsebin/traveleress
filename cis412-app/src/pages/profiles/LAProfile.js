@@ -38,9 +38,7 @@ const LAProfile = ({ onClose }) => {
                             <span className="bio-city">New York</span>
                         </div>
                         <div style={{ height: '5px' }}></div>
-                    </div>
-                    <div className="App-body">
-                        <div class="info-box">
+                        <div class="others-info-box">
                             <h3>Hobbies:</h3>
                             <ul>
                                 <li>Trying new coffee shops</li>
@@ -48,9 +46,7 @@ const LAProfile = ({ onClose }) => {
                                 <li>Going on road trips (yeehaw)</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="App-body">
-                        <div class="info-box">
+                        <div class="others-info-box">
                             <h3>Recent trips:</h3>
                             <ul>
                                 <li>Toronto, 02/18/24 - 02/22/24</li>
@@ -62,9 +58,7 @@ const LAProfile = ({ onClose }) => {
                                 <li>Houston, 05/14/24 - 06/07/24</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="App-body">
-                        <div class="socials-box">
+                        <div class="other-socials-box">
                             <h3>Socials:</h3>
                             <div className="social-icons">
                                 <img src={instagram} alt="Instagram" className="social-icon" />

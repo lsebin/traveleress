@@ -1,5 +1,4 @@
 import React from "react";
-import mapImage from '../images/maps.jpeg';
 import '../styles/events.css';
 import './Landing.css';
 import star from '../icons/add.svg';
@@ -7,6 +6,12 @@ import globe from '../icons/earth.svg';
 import calendar from '../icons/calendar.svg';
 import person from '../icons/user-circle.svg';
 import { useNavigate } from 'react-router-dom';
+import coffee from '../images/guestcoffee.png';
+import shop from '../images/guestshop.png';
+import food from '../images/guestfood.png';
+import ashleyT from '../images/ashleyT.jpg';
+import sebinL from '../images/sebinL.jpg';
+import viviL from '../images/viviL.jpg';
  
 const Events = () => {
     const navigate = useNavigate();
@@ -19,41 +24,80 @@ const Events = () => {
         backgroundColor: '#f7f3f0', /* Optional: Set a background color */
         position: 'static'
     };
+    const eventBoxStyle = {
+        padding: '10px', 
+        textAlign: 'left',
+        backgroundColor: 'white'
+    }
 
     return (
         <div style={containerStyle}>
             <header className="App-header">
-            <div className="header-status"> Your Events</div>
-            {/* <div>
-                <div class="row justify-content-between">
-                    <div class="col-10">
-                        <h1 class="title">Your Events</h1>
+                <div className="header-status"> Your Events</div>         
+                <div style={{ fontSize: '25px', textAlign: 'left', fontWeight:'500', marginRight: '30vh'}}>Hosting </div>
+                <div className="hosting-event-box" onClick={() => navigate('/hostEvent/hostCoffee')} style= {eventBoxStyle}>
+                    <img src={coffee} className="map-style" alt="katie_map" />
+                    <div className="event-info">
+                        <h2 className="event-title">SWE Coffee Chats</h2>
+                        <div style={{ display: 'flex', alignItems: 'center', 
+                                        justifyContent: 'space-between', marginTop: '-2px' }}>
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                                <div className="avatar-small">
+                                    <img className="profile" src={viviL} alt="Event location map" />
+                                </div>
+                                <p className="event-organizer">Vivi L.</p>
+                            </div>
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', 
+                                        justifyContent: 'space-between', marginTop: '-2px' }}>
+                            <button className="view-details">View Details</button>
+                            <div className="participation-box">2/3</div>
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <button class="plusButton">+</button>
-                    </div>       
-                </div>
-            </div> */}
-        
-         
-        <div style={{ fontSize: '25px', textAlign: 'left', fontWeight:'500', marginRight: '25vh'}}>Hosting </div>
-        <div class = "event-card">
-            <div style={{width: '175px', marginLeft:'10px', textAlign:'left'}}> 
-                <div class="card-title">Coffee chats!</div>
-                <div className="dateButton">2024/05/04</div>
-                <div style={{ fontSize: '14px', fontWeight:'300', width:'140px'}}>3901 Walnut St, Philadelphia, PA 19104</div>
-            </div>
-    
-            <div style={{width: '175px',marginLeft:'auto', marginRight:'auto'}}>
-                <img src={mapImage} class="card-img-top map img-fluid rounded-start" alt="map" style={{width:'80%'}}></img>
-                <div style ={{height: '20px'}}> </div>
-            </div>
-        </div>    
-
-         <div style={{height: '25px'}}>  </div>      
-
-        <div style={{ fontSize: '25px', textAlign: 'left', fontWeight:'500', marginRight: '25vh'}}>Guesting </div>
-        <div class = "event-card">
+                </div> 
+                <div style={{height: '25px'}}>  </div>      
+                <div style={{ fontSize: '25px', textAlign: 'left', fontWeight:'500', marginRight: '27.5vh'}}>Guesting </div>
+                <div className="hosting-event-box" onClick={() => navigate('/guestEvent/guestFood')} style= {eventBoxStyle}>
+                        <img src={food} className="map-style" alt="katie_map" />
+                        <div className="event-info">
+                            <h2 className="event-title">Best Halal Food Truck</h2>
+                            <div style={{ display: 'flex', alignItems: 'center', 
+                                          justifyContent: 'space-between', marginTop: '-2px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center' }}>
+                                    <div className="avatar-small">
+                                        <img className="profile" src={ashleyT} alt="Event location map" />
+                                    </div>
+                                    <p className="event-organizer">Ashley T.</p>
+                                </div>
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', 
+                                          justifyContent: 'space-between', marginTop: '-2px' }}>
+                                <button className="view-details">Learn More</button>
+                                <div className="participation-box">3/4</div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div className="hosting-event-box" onClick={() => navigate('/guestEvent/guestShop')} style= {eventBoxStyle}>
+                        <img src={shop} className="map-style" alt="katie_map" />
+                        <div className="event-info">
+                            <h2 className="event-title">South Philly Thrift Haul</h2>
+                            <div style={{ display: 'flex', alignItems: 'center', 
+                                          justifyContent: 'space-between', marginTop: '-2px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center' }}>
+                                    <div className="avatar-small">
+                                        <img className="profile" src={sebinL} alt="Event location map" />
+                                    </div>
+                                    <p className="event-organizer">Sebin L.</p>
+                                </div>
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', 
+                                          justifyContent: 'space-between', marginTop: '-2px' }}>
+                                <button className="view-details">Learn More</button>
+                                <div className="participation-box">4/6</div>
+                            </div>
+                        </div>
+                    </div>
+        {/* <div class = "event-card">
             <div style={{width: '175px', marginLeft:'10px', textAlign:'left'}}> 
                 <div class="card-title">Thrift Marketing </div>
                 <div className="dateButton">2024/05/25</div>
@@ -76,7 +120,7 @@ const Events = () => {
                 <img src={mapImage} class="card-img-top map img-fluid rounded-start" alt="map" style={{width:'80%'}}></img>
                 <div style ={{height: '20px'}}> </div>
             </div>
-        </div>  
+        </div>   */}
         <div style={{ height: '20vh' }}></div> {/* Empty vertical box */}    
 
                 <div className="nav-bar" style={{position: 'fixed', bottom:'0vh', width:'100%'}}>

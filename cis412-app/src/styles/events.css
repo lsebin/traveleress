@@ -35,6 +35,31 @@
     font-size: 20px;
 }
 
+.hosting-event-box {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 10px; /* Spacing between the boxes */
+    border: 1.5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 90%;
+}
+
+.view-details {
+    background-color: #1f47cd; /* Adjust button color as needed */
+    color: white;
+    font-size: 13px;
+    border: 1px solid black;
+    padding: 5px 5px;
+    margin-left: -2px;
+    border-radius: 100px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 .learnMore {
     background-color: white;
