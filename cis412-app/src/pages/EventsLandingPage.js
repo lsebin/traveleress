@@ -1,8 +1,9 @@
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './Landing.css';
+import '../styles/events.css';
 import marker from './images/marker-pin-01.png';
-import star from './images/star-06.png';
+import star from './images/add.png';
 import globe from './images/globe-05.png';
 import calendar from './images/Vector.png';
 import person from './images/Icon.png';
@@ -21,6 +22,7 @@ const EventsLandingPage = () => {
     // maxHeight: '812px', /* iPhone height */
     margin: '0 auto', /* Center the content horizontally */
     backgroundColor: '#f7f3f0', /* Optional: Set a background color */
+    position: 'static'
   };
 
   useEffect(() => {
@@ -38,14 +40,13 @@ const EventsLandingPage = () => {
     if (event.target.value !== 'option2') {
       setSelectedOption(event.target.value);
     }
-    
   };
  
-
   return (
     <div style={containerStyle}>
       <header className="App-header">
-      <div className="header-status" style={{position: 'fixed', top:'3vh'}}>Meet up!</div>
+      <div className="header-status"> Meet up!</div>
+      <div className="App-body" style={{textAlign: 'center'}}>
       <div className="landing-outline-box" style= {{border: '2px solid black', padding: '10px'}}>
         <img src={marker} style={{ height: '25px'}} alt="marker" />
         <div style={{ width: '2vh' }}></div>
@@ -74,21 +75,21 @@ const EventsLandingPage = () => {
       <div className = "landing-outline-box">
         <button className ="s-card" style={{ backgroundColor: '#fe755a'}}> Food </button>
         <div style={{ width: '20px' }}></div> {/* Empty vertical box */}
-        <button className ="s-card" style={{ backgroundColor: '#fec37d', color: 'black'}}> Thrift </button>
+        <button className ="s-card" style={{ backgroundColor: '#f7cdfa', color: 'black'}} onClick={() => navigate('/mapPage')}> Coffee </button> 
+        
       </div>
       
       <div className = "landing-outline-box">
-        <button className ="s-card" style={{ backgroundColor: '#f7cdfa', color: 'black'}} onClick={() => navigate('/mapPage')}> Coffee </button> 
+       <button className ="s-card" style={{ backgroundColor: '#fec37d', color: 'black'}}> Thrift </button>
         <div style={{ width: '20px' }}></div> {/* Empty vertical box */}
         <button className ="s-card" style={{ backgroundColor: '#4c8d7d'}}> Shopping </button>
       </div>
       
-      <div style={{ height: '25vh' }}></div> {/* Empty vertical box */}
-
-
+      <div style={{ height: '45vh' }}></div> {/* Empty vertical box */}
+      </div>
 
       <div className="nav-bar" style={{position: 'fixed', bottom:'0vh', width:'100%'}}>
-          <button className="nav-icon-button">
+          <button className="nav-icon-button" onClick={() => navigate('/hostEvent')}>
               <img src={star} style={{ height: '25px' }} alt="star" />
           </button>
           <button className="nav-icon-button" onClick={() => {/*TODO: Meetup page*/}}>
@@ -104,9 +105,10 @@ const EventsLandingPage = () => {
               <img src={person} style={{ height: '25px' }} alt="person" />
           </button>
       </div>
+      
     
-      </header>
 
+    </header>
     </div>
   );
 }
