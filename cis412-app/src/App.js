@@ -12,6 +12,7 @@ import Coffee1Page from './pages/specificEvents/coffeeEvents/coffee1';
 import Coffee2Page from "./pages/specificEvents/coffeeEvents/coffee2";
 import Coffee3Page from "./pages/specificEvents/coffeeEvents/coffee3";
 import Coffee4Page from "./pages/specificEvents/coffeeEvents/coffee4";
+import HostCoffeePage from './pages/specificEvents/coffeeEvents/hostCoffee';
 
 import FoodType from './pages/specificEventTypes/foodType';
 import Food1Page from './pages/specificEvents/foodEvents/food1';
@@ -64,6 +65,8 @@ function App() {
             <Route exact path="/events" element={<Events />} />
             <Route exact path="/userProfile" element={<UserProfile />} />
             <Route exact path="/hostEvent" element={<Home />} />
+
+            <Route exact path="/hostEvent/hostCoffee" element={<HostCoffeePage />} /> 
 
             {/* COFFEE */}
             <Route exact path="/coffeeType" element={<CoffeeType />}/>
