@@ -41,7 +41,7 @@
   /* background-color: #f7cdfa; */
   border-radius: 15px;
   overflow: hidden;
-  margin-left: 25px;
+  margin-left: -10px;
   margin-right: 25px;
   margin-bottom: 20px; /* Spacing between the boxes */
   box-shadow: 0 4px 10px rgba(0, 0, 1, 1);
@@ -77,12 +77,14 @@
   width: 100%;
 }
 
+
+
 .learn-more {
   background-color: #f7f3f0; /* Adjust button color as needed */
   color: black;
   font-size: 13px;
   border: 1px solid black;
-  padding: 5px 8px;
+  padding: 5px 6px;
   border-radius: 100px;
   font-weight: bold;
   cursor: pointer;
@@ -97,9 +99,11 @@
 
 .map-style {
   height: 120px;
+  width: 150px;
   margin-right: 10px; /* Add space between the map and the info */
   border-radius: 15px;
   margin-left: 5px;
+  object-fit: cover; 
 }
 
 .nav-bar {
@@ -156,7 +160,7 @@
   font-size: 13px;
   border: 1px solid black;
   border-radius: 100px;
-  padding: 5px 9px;
+  padding: 5px 8px;
 }
 
 

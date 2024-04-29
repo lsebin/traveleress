@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import mapImage from '../../../images/thrifting2.png';
+import mapImage from '../../../images/guestshop.png';
 import profile from '../../../images/sebinL.jpg';
 import '../../../styles/meetup.css';
 import star from '../../../icons/add.svg';
@@ -8,22 +8,22 @@ import globe from '../../../icons/earth.svg';
 import calendar from '../../../icons/calendar.svg';
 import person from '../../../icons/user-circle.svg';
 import { useNavigate } from 'react-router-dom';
-import SignUpSuccessful from "../../popUps/signUpSuccessful";
+import CancelEvent from "../../popUps/cancelEvent";
 import SubmitSuccessful from "../../popUps/submitSuccessful";
 import ErrorUnderDevelopment from "../../popUps/errorUnderDevelopment";
 import SLProfile from "../../profiles/SLProfile";
 
-const Shop2Page = () => {
+const GuestShopPage = () => {
     const navigate = useNavigate();
-    const [showSignUpSuccessful, setShowSignUpSuccessful] = useState(false);
+    const [showCancelEvent, setShowCancelEvent] = useState(false);
     const [showSubmitSuccessful, setShowSubmitSuccessful] = useState(false);
     const [showError, setShowError] = useState(false);
     const [showHost, setShowHost] = useState(false);
-    const handleSignUpClick = () => {
-        setShowSignUpSuccessful(true);
+    const handleCancelEventClick = () => {
+        setShowCancelEvent(true);
     };
-    const handleCloseSignUp = () => {
-        setShowSignUpSuccessful(false);
+    const handleCloseCancelEvent = () => {
+        setShowCancelEvent(false);
     };
     const handleSubmitClick = () => {
         setShowSubmitSuccessful(true);
@@ -55,9 +55,9 @@ const Shop2Page = () => {
         <div style={containerStyle}>
             <header className="meetup-header">
                 <div className="back-run">
-                    <Link to="/shopType" className="back">&lt;</Link>
+                    <Link to="/events" className="back">&lt;</Link>
                 </div>
-                <p style={{marginTop: '4px', }}>Explore 5th Ave with me :D</p>
+                <p style={{marginTop: '4px', }}>South Philly Thrift Haul</p>
             </header>
             <section className="meetup-details">
                 <div className="host-info">
@@ -81,41 +81,46 @@ const Shop2Page = () => {
                             <div>Capacity</div>
                         </div>
                         <div class="col-2">
-                            <div className="participation-box-event">1/4</div>
+                            <div className="participation-box-event">4/6</div>
                         </div>
                     </div>
                 </div>
                 <div style={{ height: '5px' }}></div>
                 <div className="event-desc">
-                    My first time in NYC and I would love to explore the infamous 5th avenue with a group
-                    of gals! Down to go into any stores and shop around for literally forever. 
+                    Explore some of the thrift stores in South Philly! You can find some really cool pieces
+                    of clothing, furniture, decoration, and more! 
                 </div>
                 <div className="event-info-container">
                     <div className="event-info-section">
                         <div className="event-info-dt">Date</div>
-                        <div className="event-date">May 04, 2024</div>
+                        <div className="event-date">May 06, 2024</div>
                     </div> 
                     <div className="event-info-section">
                         <div className="event-info-dt">Time</div>
-                        <div className="event-time">10AM - 3PM</div>
+                        <div className="event-time">1PM - 3PM</div>
                     </div>  
                 </div>
+                
                 <div className="event-info-specific">General Meet-Up Location</div>
                 <div className="event-desc">
-                    Time Square
+                    Seger Park
                 </div>
-                <button className="abutton" onClick={handleSignUpClick}>Sign up</button>
+                <button className="abutton" style={{backgroundColor: "#82b2ff"}}>Signed up!</button>
+                <button className="abutton" 
+                        style={{backgroundColor: "#f73734", marginLeft: "20px"}}
+                        onClick={handleCancelEventClick}>Cancel</button>
+                {showCancelEvent && (
+                    <CancelEvent onClose={handleCloseCancelEvent} />
+                )}   
                 <div style={{ height: '10px' }}></div>
                 <div>
                     <div className="event-info-specific">Current Q&A</div>
-                    {showSignUpSuccessful && (
-                        <SignUpSuccessful onClose={handleCloseSignUp} />
-                    )}
                     <div style={{ height: '5px' }}></div>
                     <ul className="qa-list">
                         <li>
-                            <strong>Q:</strong> Are you ready to look at every single item in the LEGO store with me
-                            <p><strong>A:</strong> YESSS</p>
+                            <strong>Q:</strong> Are we going to be walking from store to store? 
+                            <p><strong>A:</strong> Mostly yes since the stores are pretty close together!
+                            For the farther stores we will be taking the SEPTA bus.</p>
                         </li>
                     </ul>
                 </div>
@@ -129,7 +134,7 @@ const Shop2Page = () => {
                         )}
                     </div>
                     <img className="mapImage" 
-                         style={{width: '250px', height: '180px',  objectFit: 'cover'}} 
+                         style={{width: '250px', height: '180px',objectFit: 'cover'}} 
                          src={mapImage} 
                          alt="Event location map"
                          onClick={handleErrorClick} />
@@ -160,4 +165,4 @@ const Shop2Page = () => {
     );
 };
  
-export default Shop2Page;
+export default GuestShopPage;

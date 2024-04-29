@@ -1,7 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './specificEventType.css';
+import '../Landing.css'
 import katie_map from '../../images/katie_map.png';
-import star from '../../icons/star.svg';
+import coffee2 from '../../images/coffee2.png';
+import coffee3 from '../../images/coffee3.png';
+import coffee4 from '../../images/coffee4.png';
+import star from '../../icons/add.svg';
 import globe from '../../icons/earth.svg';
 import calendar from '../../icons/calendar.svg';
 import person from '../../icons/user-circle.svg';
@@ -15,8 +19,8 @@ const CoffeeType = () => {
     const navigate = useNavigate();
 
     const containerStyle = {
-        maxWidth: '375px',
-        maxHeight: '812px',
+        maxWidth: '70vh',
+        maxHeight: '100vh',
         margin: '0 auto',
         backgroundColor: '#f7f3f0',
     };
@@ -29,8 +33,7 @@ const CoffeeType = () => {
 
     return (
         <div style={containerStyle}>
-            <header className="App-header">
-                <div style={{backgroundColor: '#f7cdfa',
+            <div style={{backgroundColor: '#f7cdfa',
                             width: '100%',
                             display: 'flex', // Use flexbox for alignment
                             flexDirection: 'column', // Stack children vertically
@@ -44,10 +47,9 @@ const CoffeeType = () => {
                         <span className="header-status-coffee">Coffee</span>
                     </div>
                     <div style={{ height: '10px' }}></div>
-                    <div className="line"></div>
                 </div>
+            <header className="App-header">
                 <div className="App-body">
-                    <div style={{ height: '30px' }}></div>
                     <div className="event-box" onClick={() => navigate('/meetup/coffee/coffee-1')} style= {eventBoxStyle}>
                         <img src={katie_map} className="map-style" alt="katie_map" />
                         <div className="event-info">
@@ -70,7 +72,7 @@ const CoffeeType = () => {
                     </div> 
                     <div style={{ height: '10px' }}></div>
                     <div className="event-box" onClick={() => navigate('/meetup/coffee/coffee-2')} style={eventBoxStyle}>
-                        <img src={katie_map} className="map-style" alt="katie_map" />
+                        <img src={coffee2} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Manhattan-view Coffee run!</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
@@ -93,7 +95,7 @@ const CoffeeType = () => {
                     </div> 
                     <div style={{ height: '10px' }}></div>
                     <div className="event-box" onClick={() => navigate('/meetup/coffee/coffee-3')} style= {eventBoxStyle}>
-                        <img src={katie_map} className="map-style" alt="katie_map" />
+                        <img src={coffee3} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Check out this new coffee shop!</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
@@ -114,7 +116,7 @@ const CoffeeType = () => {
                     </div> 
                     <div style={{ height: '10px' }}></div>
                     <div className="event-box" onClick={() => navigate('/meetup/coffee/coffee-4')} style= {eventBoxStyle}>
-                        <img src={katie_map} className="map-style" alt="katie_map" />
+                        <img src={coffee4} className="map-style" alt="katie_map" />
                         <div className="event-info">
                             <h2 className="event-title">Sunny day! Care for a coffee date?</h2>
                             <div style={{ display: 'flex', alignItems: 'center', 
@@ -134,23 +136,23 @@ const CoffeeType = () => {
                         </div>
                     </div> 
                     <div style={{ height: '10px' }}></div>
-                    <div className="nav-bar">
-                        <button className="nav-icon-button">
-                            <img src={star} style={{ height: '25px' }} alt="star" />
-                        </button>
-                        <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
-                            <div className="nav-button">
-                                <img src={globe} style={{ height: '25px' }} alt="globe" />
-                                <span>Meet up</span>
-                            </div>
-                        </button>
-                        <button className="nav-icon-button" onClick={() => navigate('/events')}>
-                            <img src={calendar} style={{ height: '25px' }} alt="calendar" />
-                        </button>
-                        <button className="nav-icon-button" onClick={() => navigate('/userProfile')}>
-                            <img src={person} style={{ height: '25px' }} alt="person" />
-                        </button>
-                    </div>
+                </div>
+                <div className="nav-bar" style={{position: 'fixed', bottom:'0vh', width:'100%'}}>
+                    <button className="nav-icon-button" onClick={() => navigate('/hostEvent')}>
+                        <img src={star} style={{ height: '25px' }} alt="star" />
+                    </button>
+                    <button className="nav-icon-button" onClick={() => {/*TODO: Meetup page*/}}>
+                        <div className="nav-button">
+                            <img src={globe} style={{ height: '25px' }} alt="globe" />
+                            <span>Meet</span>
+                        </div>
+                    </button>
+                    <button className="nav-icon-button" onClick={() => navigate('/events')}>
+                        <img src={calendar} style={{ height: '25px' }} alt="calendar" />
+                    </button>
+                    <button className="nav-icon-button" onClick={() => navigate('/userprofile')}>
+                        <img src={person} style={{ height: '25px' }} alt="person" />
+                    </button>
                 </div>
             </header>
         </div> 

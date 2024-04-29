@@ -41,7 +41,7 @@
     margin-top: 10px;
     margin-left: 25px;
     margin-right: 25px;
-    margin-bottom: 20px; /* Spacing between the boxes */
+    margin-bottom: 10px; /* Spacing between the boxes */
     border: 1.5px solid black;
     display: flex;
     align-items: center;
@@ -54,7 +54,8 @@
     color: white;
     font-size: 13px;
     border: 1px solid black;
-    padding: 5px 8px;
+    padding: 5px 5px;
+    margin-left: -2px;
     border-radius: 100px;
     font-weight: bold;
     cursor: pointer;

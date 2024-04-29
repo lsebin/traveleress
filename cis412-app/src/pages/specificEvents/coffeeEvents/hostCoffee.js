@@ -1,34 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import mapImage from '../../../images/maps.jpeg';
+import mapImage from '../../../images/guestcoffee.png';
 import profile from '../../../images/viviL.jpg';
 import '../../../styles/meetup.css';
-import star from '../../../icons/star.svg';
+import star from '../../../icons/add.svg';
 import globe from '../../../icons/earth.svg';
 import calendar from '../../../icons/calendar.svg';
 import person from '../../../icons/user-circle.svg';
 import { useNavigate } from 'react-router-dom';
-import SignUpSuccessful from "../../popUps/signUpSuccessful";
-import SubmitSuccessful from "../../popUps/submitSuccessful";
 import ErrorUnderDevelopment from "../../popUps/errorUnderDevelopment";
 
 const HostCoffeePage = () => {
     const navigate = useNavigate();
-    const [showSignUpSuccessful, setShowSignUpSuccessful] = useState(false);
-    const [showSubmitSuccessful, setShowSubmitSuccessful] = useState(false);
     const [showError, setShowError] = useState(false);
-    const handleSignUpClick = () => {
-        setShowSignUpSuccessful(true);
-    };
-    const handleCloseSignUp = () => {
-        setShowSignUpSuccessful(false);
-    };
-    const handleSubmitClick = () => {
-        setShowSubmitSuccessful(true);
-    };
-    const handleCloseSubmit = () => {
-        setShowSubmitSuccessful(false);
-    };
     const handleErrorClick = () => {
         setShowError(true);
     };
@@ -36,8 +20,8 @@ const HostCoffeePage = () => {
         setShowError(false);
     };
     const containerStyle = {
-        maxWidth: '375px',
-        maxHeight: '812px',
+        maxWidth: '70vh',
+        maxHeight: '100vh',
         margin: '0 auto',
         backgroundColor: '#f7f3f0',
         overflow: 'auto',
@@ -78,11 +62,22 @@ const HostCoffeePage = () => {
                     Let's grab coffee and talk about what it's like to be a woman
                     in SWE (or tech in general)! Grab a coffee and yap with me.
                 </div>
+                <div className="event-info-container">
+                    <div className="event-info-section">
+                        <div className="event-info-dt">Date</div>
+                        <div className="event-date">May 07, 2024</div>
+                    </div> 
+                    <div className="event-info-section">
+                        <div className="event-info-dt">Time</div>
+                        <div className="event-time">10AM - 12PM</div>
+                    </div>  
+                </div>
+                <div className="event-info-specific">General Meet-Up Location</div>
+                <div className="event-desc">
+                    Rittenhouse Square
+                </div>
                 <div>
                     <div className="event-info-specific">Current Q&A</div>
-                    {showSignUpSuccessful && (
-                        <SignUpSuccessful onClose={handleCloseSignUp} />
-                    )}
                     <div style={{ height: '5px' }}></div>
                     <ul className="qa-list">
                         <li>
@@ -93,15 +88,12 @@ const HostCoffeePage = () => {
                 </div>
                 <div>
                     <div className="event-info-specific">Incoming questions: </div>
-                    <div className="question-form">
-                        <input class="question" type="text" placeholder="Type your question" />
-                        <button className="abutton" onClick={handleSubmitClick}>Submit</button>
-                        {showSubmitSuccessful && (
-                            <SubmitSuccessful onClose={handleCloseSubmit} />
-                        )}
+                    <div style={{ height: '5px' }}></div>
+                    <div className="event-desc" style={{color: "gray"}}>
+                        You have no incoming questions.
                     </div>
                     <img className="mapImage" 
-                         style={{width: '250px', height: '180px'}} 
+                         style={{width: '250px', height: '180px',objectFit: 'cover'}} 
                          src={mapImage} 
                          alt="Event location map"
                          onClick={handleErrorClick} />
@@ -111,21 +103,21 @@ const HostCoffeePage = () => {
                     <div style={{ height: '20px' }}></div>
                 </div>
             </section>
-            <div className="nav-bar">
-                    <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
+            <div className="nav-bar" style={{position: 'fixed', bottom:'0vh', width:'100%'}}>
+                    <button className="nav-icon-button" onClick={() => navigate('/hostEvent')}>
                         <img src={star} style={{ height: '25px' }} alt="star" />
                     </button>
-                    <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
-                        <img src={globe} style={{ height: '25px' }} alt="globe" />
-                    </button>
-                    <button className="nav-icon-button" onClick={() => navigate('/events')}>
+                    <button className="nav-icon-button" onClick={() => {/*TODO: Meetup page*/}}>
                         <div className="nav-button">
-                            <img src={calendar} style={{ height: '25px' }} alt="calendar" />
-                            <span>Events</span>
+                            <img src={globe} style={{ height: '25px' }} alt="globe" />
+                            <span>Meet</span>
                         </div>
                     </button>
-                    <button className="nav-icon-button" onClick={() => navigate('/userProfile')}>
-                            <img src={person} style={{ height: '25px' }} alt="person" />
+                    <button className="nav-icon-button" onClick={() => navigate('/events')}>
+                        <img src={calendar} style={{ height: '25px' }} alt="calendar" />
+                    </button>
+                    <button className="nav-icon-button" onClick={() => navigate('/userprofile')}>
+                        <img src={person} style={{ height: '25px' }} alt="person" />
                     </button>
                 </div>
         </div>

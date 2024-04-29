@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import mapImage from '../../../images/maps.jpeg';
+import mapImage from '../../../images/food1.png';
 import profile from '../../../images/sebinL.jpg';
 import '../../../styles/meetup.css';
-import star from '../../../icons/star.svg';
+import star from '../../../icons/add.svg';
 import globe from '../../../icons/earth.svg';
 import calendar from '../../../icons/calendar.svg';
 import person from '../../../icons/user-circle.svg';
@@ -44,8 +44,8 @@ const Food1Page = () => {
         setShowHost(false);
     };
     const containerStyle = {
-        maxWidth: '375px',
-        maxHeight: '812px',
+        maxWidth: '70vh',
+        maxHeight: '100vh',
         margin: '0 auto',
         backgroundColor: '#f7f3f0',
         overflow: 'auto',
@@ -90,6 +90,21 @@ const Food1Page = () => {
                     There's a billion AMAZING boba shop in NYC's k-town, please come and go on a boba
                     haul with me!
                 </div>
+                <div className="event-info-container">
+                    <div className="event-info-section">
+                        <div className="event-info-dt">Date</div>
+                        <div className="event-date">May 13, 2024</div>
+                    </div> 
+                    <div className="event-info-section">
+                        <div className="event-info-dt">Time</div>
+                        <div className="event-time">3PM - 5PM</div>
+                    </div>  
+                </div>
+                
+                <div className="event-info-specific">General Meet-Up Location</div>
+                <div className="event-desc">
+                    Empire State Building
+                </div>
                 <button className="abutton" onClick={handleSignUpClick}>Sign up</button>
                 <div style={{ height: '10px' }}></div>
                 <div>
@@ -115,7 +130,7 @@ const Food1Page = () => {
                         )}
                     </div>
                     <img className="mapImage" 
-                         style={{width: '250px', height: '180px'}} 
+                         style={{width: '250px', height: '180px',objectFit: 'cover'}} 
                          src={mapImage} 
                          alt="Event location map"
                          onClick={handleErrorClick} />
@@ -125,21 +140,21 @@ const Food1Page = () => {
                     <div style={{ height: '20px' }}></div>
                 </div>
             </section>
-            <div className="nav-bar">
-                    <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
+            <div className="nav-bar" style={{position: 'fixed', bottom:'0vh', width:'100%'}}>
+                    <button className="nav-icon-button" onClick={() => navigate('/hostEvent')}>
                         <img src={star} style={{ height: '25px' }} alt="star" />
                     </button>
-                    <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
-                            <div className="nav-button">
-                                <img src={globe} style={{ height: '25px' }} alt="globe" />
-                                <span>Meet up</span>
-                            </div>
-                        </button>
+                    <button className="nav-icon-button" onClick={() => {/*TODO: Meetup page*/}}>
+                        <div className="nav-button">
+                            <img src={globe} style={{ height: '25px' }} alt="globe" />
+                            <span>Meet</span>
+                        </div>
+                    </button>
                     <button className="nav-icon-button" onClick={() => navigate('/events')}>
                         <img src={calendar} style={{ height: '25px' }} alt="calendar" />
                     </button>
-                    <button className="nav-icon-button" onClick={() => navigate('/userProfile')}>
-                            <img src={person} style={{ height: '25px' }} alt="person" />
+                    <button className="nav-icon-button" onClick={() => navigate('/userprofile')}>
+                        <img src={person} style={{ height: '25px' }} alt="person" />
                     </button>
                 </div>
         </div>

@@ -38,9 +38,7 @@ const KLProfile = ({ onClose }) => {
                             <span className="bio-city">Boston</span>
                         </div>
                         <div style={{ height: '5px' }}></div>
-                    </div>
-                    <div className="App-body">
-                        <div class="info-box">
+                        <div class="others-info-box">
                             <h3>Hobbies:</h3>
                             <ul>
                                 <li>Volunteering at an animal shelter</li>
@@ -48,9 +46,7 @@ const KLProfile = ({ onClose }) => {
                                 <li>Surfing</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="App-body">
-                        <div class="info-box">
+                        <div class="others-info-box">
                             <h3>Recent trips:</h3>
                             <ul>
                                 <li>New Haven, 03/09/24 - 03/14/24</li>
@@ -62,9 +58,7 @@ const KLProfile = ({ onClose }) => {
                                 <li>San Francisco, 08/24/24 - 09/04/24</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="App-body">
-                        <div class="socials-box">
+                        <div class="other-socials-box">
                             <h3>Socials:</h3>
                             <div className="social-icons">
                                 <img src={instagram} alt="Instagram" className="social-icon" />

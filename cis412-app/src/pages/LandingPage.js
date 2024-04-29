@@ -12,7 +12,7 @@ import React, { useEffect } from 'react';
 
 const LandingPage = () => {
   const containerStyle = {
-    maxWidth: '50vh', /*'375px'*/
+    maxWidth: '70vh', /*'375px'*/
     maxHeight: '100vh',
     margin: '0 auto',
     backgroundColor: '#f7f3f0', /* Optional: Set a background color */
