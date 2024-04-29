@@ -9,8 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'; // Import Datepicker CSS
-import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
-{/* <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVKbp-tRow4zxjhsU0oJ7RXdd6JFsGdxs&libraries=places"></script> */}
+
 
 
 const Home = () => {
