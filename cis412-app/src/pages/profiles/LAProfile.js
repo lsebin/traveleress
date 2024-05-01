@@ -27,7 +27,7 @@ const LAProfile = ({ onClose }) => {
                         <div style={{ height: '15px' }}></div>
                         <div className="name">Liz A.</div>
                         <div style={{ height: '6px' }}></div>
-                        <div className="bio-box">
+                        <div className="others-bio-box">
                             <img src={face_smile} alt="Smile" className="bio-icon" />
                             <span className="bio-age">25</span>
                             <div className="bio-separator"></div>

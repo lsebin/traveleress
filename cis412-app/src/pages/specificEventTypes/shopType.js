@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './specificEventType.css';
 import '../Landing.css'
-import user_circle from '../../icons/user-circle.svg';
 import star from '../../icons/add.svg';
 import globe from '../../icons/earth.svg';
 import calendar from '../../icons/calendar.svg';
@@ -11,6 +10,10 @@ import thrifting1 from '../../images/thrifting1.png';
 import thrifting2 from '../../images/thrifting2.png';
 import thrifting3 from '../../images/thrifting3.png';
 import thrifting4 from '../../images/thrifting4.png';
+import lizA from '../../images/lizA.jpeg';
+import ashleyT from '../../images/ashleyT.jpg';
+import sebinL from '../../images/sebinL.jpg';
+import katieL from '../../images/katieL.jpg';
 
 const ShopType = () => {
     const navigate = useNavigate();
@@ -54,7 +57,9 @@ const ShopType = () => {
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={ashleyT} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer">Ashley T.</p>
                                 </div>
                             </div>
@@ -73,7 +78,9 @@ const ShopType = () => {
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={sebinL} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer">Sebin L.</p>
                                 </div>
                             </div>
@@ -94,7 +101,9 @@ const ShopType = () => {
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={lizA} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer">Liz A.</p>
                                 </div>
                             </div>
@@ -113,7 +122,9 @@ const ShopType = () => {
                             <div style={{ display: 'flex', alignItems: 'center', 
                                           justifyContent: 'space-between', marginTop: '-2px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <img src={user_circle} alt="user_profile_pic" />
+                                    <div className="avatar-small">
+                                        <img className="profile" src={katieL} alt="Event location map" />
+                                    </div>
                                     <p className="event-organizer">Katie L.</p>
                                 </div>
                             </div>
