@@ -4,7 +4,7 @@ import '../styles/events.css';
 import star from './images/add.png';
 import globe from './images/globe-05.png';
 import calendar from './images/Vector.png';
-import person from './images/Icon.png';
+import person from '../icons/user-circle.svg';
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';

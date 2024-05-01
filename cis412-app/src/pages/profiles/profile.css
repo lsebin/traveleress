@@ -38,6 +38,18 @@
   margin: 8px 25px;
 }
 
+.others-bio-box {
+  background-color: #1f47cd;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px 5px;
+  margin: 8px 10px;
+}
+
+
 .bio-icon {
   height: 25px;
   width: auto;
