@@ -16,7 +16,7 @@ import viviL from '../images/viviL.jpg';
 const Events = () => {
     const navigate = useNavigate();
     const containerStyle = {
-        maxWidth: '50vh', /*'375px'*/
+        maxWidth: '70vh', /*'375px'*/
         maxHeight: '100vh',
         // maxWidth: '375px', /* iPhone width */
         // maxHeight: '812px', /* iPhone height */

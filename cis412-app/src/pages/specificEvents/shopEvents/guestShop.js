@@ -148,14 +148,14 @@ const GuestShopPage = () => {
                     <button className="nav-icon-button" onClick={() => navigate('/hostEvent')}>
                         <img src={star} style={{ height: '25px' }} alt="star" />
                     </button>
-                    <button className="nav-icon-button" onClick={() => {/*TODO: Meetup page*/}}>
-                        <div className="nav-button">
-                            <img src={globe} style={{ height: '25px' }} alt="globe" />
-                            <span>Meet</span>
-                        </div>
+                    <button className="nav-icon-button" onClick={() => navigate('/eventslanding')}>
+                        <img src={globe} style={{ height: '25px' }} alt="globe" />
                     </button>
                     <button className="nav-icon-button" onClick={() => navigate('/events')}>
-                        <img src={calendar} style={{ height: '25px' }} alt="calendar" />
+                        <div className="nav-button">
+                            <img src={calendar} style={{ height: '25px' }} alt="calendar" />
+                            <span>Events</span>
+                        </div>
                     </button>
                     <button className="nav-icon-button" onClick={() => navigate('/userprofile')}>
                         <img src={person} style={{ height: '25px' }} alt="person" />
